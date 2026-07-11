@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HABLA — No lo tipees. Dilo.</title>
+<meta name="description" content="Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica. Tu voz se convierte en texto en cualquier app — Cursor, Claude Code, la terminal. Tu voz no sale de tu compu.">
+<meta property="og:title" content="HABLA — No lo tipees. Dilo.">
+<meta property="og:description" content="Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://habla-voz.github.io/habla/">
+<meta property="og:image" content="https://habla-voz.github.io/habla/og.png">
+<meta name="theme-color" content="#171310">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%23171310'/%3E%3Cg fill='%23FFB300'%3E%3Ccircle cx='256' cy='150' r='74'/%3E%3Crect x='216' y='268' width='80' height='164' rx='40'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* ============ HABLA — landing. Autocontenida: sin CDN, sin trackers. ============ */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/archivo.woff2) format('woff2')}
+@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/archivo-black.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url(fonts/jetbrains-mono.woff2) format('woff2')}
+
+:root{
+  --carbon:#171310; --surface:#201a15; --surface2:#262019; --borde:#2e261e;
+  --hueso:#f4ede3; --arena:#b9a88f; --ambar:#ffb300; --rec:#e5482f;
+  --display:'Archivo Black','Arial Black',sans-serif;
+  --body:'Archivo',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'Cascadia Code',Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--carbon);color:var(--hueso);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--ambar);color:var(--carbon)}
+a{color:var(--ambar);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+kbd{font-family:var(--mono);font-size:.82em;background:var(--surface2);border:1px solid var(--borde);border-bottom-width:3px;border-radius:6px;padding:2px 8px;white-space:nowrap}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--carbon) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--borde)}
+nav .wrap{display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--hueso)}
+.logo:hover{text-decoration:none}
+.logo b{font-family:var(--display);font-weight:400;font-size:1.25rem;letter-spacing:-.02em}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:22px;font-weight:600;font-size:.95rem}
+.navlinks a{color:var(--arena)}
+.navlinks a:hover{color:var(--hueso);text-decoration:none}
+@media(max-width:600px){.navlinks a:not(.btn):not(.gh){display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;border-radius:12px;padding:14px 26px;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-ambar{background:var(--ambar);color:var(--carbon)!important;box-shadow:0 6px 0 #8a5800}
+.btn-ambar:hover{box-shadow:0 8px 0 #8a5800}
+.btn-ambar:active{transform:translateY(2px);box-shadow:0 2px 0 #8a5800}
+.btn-borde{border:2px solid var(--borde);color:var(--hueso)!important}
+.btn-borde:hover{border-color:var(--arena)}
+nav .btn{padding:9px 18px;font-size:.92rem;box-shadow:0 4px 0 #8a5800}
+
+/* ---------- hero ---------- */
+.hero{padding:96px 0 72px;position:relative}
+.hero h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(3.2rem,10.5vw,8.2rem);line-height:.92;letter-spacing:-.015em}
+.hero h1 .dilo{color:var(--ambar)}
+.hero .sub{max-width:640px;margin:32px 0 40px;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--arena)}
+.hero .sub strong{color:var(--hueso)}
+.cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.cta-note{font-family:var(--mono);font-size:.8rem;color:var(--arena);margin-top:14px}
+.cta-note a{color:var(--arena);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- terminal demo ---------- */
+.term{margin:72px auto 0;background:var(--surface);border:1px solid var(--borde);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--borde);font-family:var(--mono);font-size:.78rem;color:var(--arena)}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:var(--borde);display:inline-block}
+.term-bar i:first-child{background:var(--rec)}
+.term-bar span{margin-left:8px}
+.term-body{padding:26px 26px 32px;font-family:var(--mono);font-size:clamp(.82rem,1.5vw,.98rem);line-height:1.9}
+.t-dim{color:var(--arena);opacity:.75}
+.t-amb{color:var(--ambar)}
+.t-ok{color:#7fb069}
+.t-rec{color:var(--rec);font-weight:700}
+.eq{display:inline-flex;align-items:flex-end;gap:2.5px;height:14px;margin:0 6px;vertical-align:-2px}
+.eq i{width:3.5px;background:var(--rec);border-radius:2px;animation:eq 0.9s ease-in-out infinite}
+.eq i:nth-child(1){height:40%;animation-delay:0s}
+.eq i:nth-child(2){height:75%;animation-delay:.15s}
+.eq i:nth-child(3){height:100%;animation-delay:.3s}
+.eq i:nth-child(4){height:60%;animation-delay:.45s}
+.eq i:nth-child(5){height:30%;animation-delay:.6s}
+@keyframes eq{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1.1)}}
+.cursor{display:inline-block;width:9px;height:1.15em;background:var(--ambar);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ---------- marquee consigna ---------- */
+.marquee{background:var(--ambar);color:var(--carbon);transform:rotate(-1.2deg) scale(1.02);margin:110px 0;padding:14px 0;overflow:hidden;white-space:nowrap}
+.marquee .track{display:inline-block;animation:slide 28s linear infinite;font-family:var(--display);font-size:1.5rem;letter-spacing:.02em}
+.marquee span{margin:0 18px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- secciones ---------- */
+section{padding:56px 0}
+.kicker{font-family:var(--mono);color:var(--ambar);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.kicker::before{content:"";display:inline-block;width:26px;height:2px;background:var(--ambar)}
+h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1;letter-spacing:-.01em;margin-bottom:22px}
+.lead{color:var(--arena);max-width:620px;font-size:1.1rem}
+.lead strong{color:var(--hueso)}
+
+/* cards por qué */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:48px}
+.card{background:var(--surface);border:1px solid var(--borde);border-radius:16px;padding:28px 26px;position:relative;overflow:hidden}
+.card h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.35rem;margin:14px 0 10px}
+.card p{color:var(--arena);font-size:.97rem}
+.card p strong{color:var(--hueso)}
+.card .n{font-family:var(--mono);color:var(--ambar);font-size:.8rem}
+
+/* pasos */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:48px;counter-reset:paso}
+.paso{border-top:3px solid var(--ambar);padding-top:20px}
+.paso::before{counter-increment:paso;content:"0" counter(paso);font-family:var(--display);font-size:2.6rem;color:var(--ambar);display:block;line-height:1}
+.paso h3{font-size:1.15rem;font-weight:800;margin:12px 0 8px}
+.paso p{color:var(--arena);font-size:.95rem}
+
+/* comparativa */
+.tabla-wrap{overflow-x:auto;margin-top:48px;border:1px solid var(--borde);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:.95rem}
+th,td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--borde)}
+thead th{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--arena);background:var(--surface)}
+tbody tr:last-child td{border-bottom:none}
+td{color:var(--arena)}
+td:first-child{color:var(--hueso);font-weight:700}
+tr.habla{background:color-mix(in srgb,var(--ambar) 9%,transparent)}
+tr.habla td{color:var(--hueso)}
+tr.habla td:first-child{color:var(--ambar);font-family:var(--display);font-weight:400;letter-spacing:.02em}
+.check{color:var(--ambar);font-weight:800}
+.x{color:var(--rec)}
+.nota{font-family:var(--mono);font-size:.75rem;color:var(--arena);opacity:.7;margin-top:12px}
+
+/* specs strip */
+.specs{margin-top:64px;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);padding:22px 0;font-family:var(--mono);font-size:.82rem;color:var(--arena);display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center}
+.specs b{color:var(--ambar);font-weight:400}
+
+/* descarga */
+#descarga .grid4{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.dl h3{display:flex;align-items:center;gap:10px}
+.dl .fmt{font-family:var(--mono);font-size:.78rem;color:var(--arena);display:block;margin:6px 0 18px}
+.dl a.btn{width:100%;justify-content:center}
+
+/* footer */
+footer{margin-top:96px;border-top:1px solid var(--borde);padding:72px 0 48px;position:relative}
+footer .marca-final{font-family:var(--display);text-transform:uppercase;font-size:clamp(3rem,12vw,9rem);line-height:.9;letter-spacing:-.01em;color:var(--surface2);user-select:none;text-align:center;margin-bottom:56px}
+footer .marca-final b{color:var(--ambar);font-weight:400}
+.foot-grid{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:start}
+.foot-grid p{color:var(--arena);font-size:.92rem;max-width:560px}
+.foot-links{display:flex;flex-direction:column;gap:8px;font-weight:600;text-align:right}
+.foot-fin{margin-top:48px;padding-top:24px;border-top:1px solid var(--borde);font-family:var(--mono);font-size:.75rem;color:var(--arena);opacity:.8;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media(max-width:640px){.foot-grid{grid-template-columns:1fr}.foot-links{text-align:left}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">
+      <svg width="22" height="22" viewBox="0 0 512 512" aria-hidden="true"><g fill="#FFB300"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg>
+      <b>HABLA</b>
+    </a>
+    <div class="navlinks">
+      <a href="#porque">Por qué</a>
+      <a href="#como">Cómo funciona</a>
+      <a class="gh" href="https://github.com/habla-voz/habla">GitHub</a>
+      <a class="btn btn-ambar" href="#descarga">Descargar</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>No lo tipees.<br><span class="dilo">Dilo.</span></h1>
+    <p class="sub"><strong>HABLA</strong> convierte tu voz en texto en cualquier app — Cursor, Claude Code, la terminal, donde estés escribiendo. Libre, gratis y <strong>100% offline</strong>: tu voz no sale de tu compu.</p>
+    <div class="cta-row">
+      <a class="btn btn-ambar" id="cta-dl" href="https://github.com/habla-voz/habla/releases/latest">↓ Descargar gratis</a>
+      <a class="btn btn-borde" href="https://github.com/habla-voz/habla">Ver el código</a>
+    </div>
+    <p class="cta-note">Windows · macOS · Linux — código abierto (MIT), fork de <a href="https://github.com/cjpais/handy">Handy</a></p>
+
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i><span>~/mi-proyecto — HABLA</span></div>
+      <div class="term-body">
+        <div class="t-dim"># 02:47 AM — el prompt número 47 del día</div>
+        <div><span class="t-amb">$</span> <kbd>F9</kbd> <span class="t-rec">● grabando</span><span class="eq"><i></i><i></i><i></i><i></i><i></i></span></div>
+        <div><span class="t-amb">&gt;</span> "<span id="type"></span><span class="cursor"></span>"</div>
+        <div id="done" style="visibility:hidden"><span class="t-ok">✓</span> <span class="t-dim">transcripto en 0.8s — local, sin internet, sin suscripción</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="mq"><span>TU VOZ ES TUYA</span><span>¡</span><span>NO LO TIPEES</span><span>¡</span><span>DILO</span><span>¡</span><span>GRATIS Y LIBRE</span><span>¡</span><span>HECHO PARA LATINOAMÉRICA</span><span>¡</span></div>
+</div>
+
+<section id="porque">
+  <div class="wrap">
+    <p class="kicker">por qué existe</p>
+    <h2>Programar con IA es escribir párrafos. Todo el día.</h2>
+    <p class="lead">Prompts largos, contexto, instrucciones. Hablar es <strong>3–4 veces más rápido</strong> que tipear — pero las herramientas buenas de dictado son pagas en dólares, piensan en inglés y mandan tu voz a un servidor ajeno. HABLA es la respuesta de este lado del mapa.</p>
+    <div class="grid4">
+      <div class="card"><span class="n">01</span><h3>Gratis</h3><p>No "gratis por 14 días". <strong>Gratis.</strong> Las otras cobran hasta USD 12 por mes por escuchar tu voz en un servidor ajeno.</p></div>
+      <div class="card"><span class="n">02</span><h3>100% offline</h3><p>Whisper y Parakeet corren <strong>en tu máquina</strong>. Cortá el wifi si querés: sigue andando. Nadie más escucha.</p></div>
+      <div class="card"><span class="n">03</span><h3>En tu español</h3><p>El de verdad: <strong>con tu acento</strong>, tus modismos y tus variables en spanglish. Y otros 90+ idiomas, por si acaso.</p></div>
+      <div class="card"><span class="n">04</span><h3>Código abierto</h3><p>Licencia MIT. <strong>Es tuyo:</strong> revisalo, mejoralo, forkealo. Así llegó hasta acá, así sigue.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <p class="kicker">cómo funciona</p>
+    <h2>Una tecla. Tu voz. Listo.</h2>
+    <div class="pasos">
+      <div class="paso"><h3>Apretá tu atajo</h3><p>El que quieras — <kbd>F9</kbd>, <kbd>Ctrl</kbd>+<kbd>Space</kbd> — o modo pulsar-para-hablar.</p></div>
+      <div class="paso"><h3>Decí lo que pensás</h3><p>Como se lo dirías a un compañero. El silencio se filtra solo (VAD Silero).</p></div>
+      <div class="paso"><h3>Aparece escrito</h3><p>La transcripción se pega donde tengas el cursor: editor, chat, terminal.</p></div>
+      <div class="paso"><h3>Seguí en lo tuyo</h3><p>Sin cambiar de ventana, sin subir audio a ningún lado, sin perder el hilo.</p></div>
+    </div>
+    <div class="specs">
+      <span><b>modelos</b> Whisper Small→Large · Parakeet V3 (CPU)</span>
+      <span><b>vad</b> Silero</span>
+      <span><b>stack</b> Rust + Tauri</span>
+      <span><b>gpu</b> opcional</span>
+      <span><b>so</b> Windows · macOS · Linux</span>
+    </div>
+  </div>
+</section>
+
+<section id="comparar">
+  <div class="wrap">
+    <p class="kicker">contra las de siempre</p>
+    <h2>La cuenta es fácil</h2>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Herramienta</th><th>Precio</th><th>Tu voz</th><th>Español</th><th>Plataformas</th></tr></thead>
+        <tbody>
+          <tr class="habla"><td>HABLA</td><td><span class="check">Gratis, open source</span></td><td><span class="check">Se queda en tu compu</span></td><td><span class="check">Primero</span></td><td>Windows · macOS · Linux</td></tr>
+          <tr><td>Wispr Flow</td><td>~USD 12/mes</td><td><span class="x">Viaja a la nube</span></td><td>Segundo idioma</td><td>Windows · macOS</td></tr>
+          <tr><td>superwhisper</td><td>~USD 8.49/mes</td><td>Local</td><td>Segundo idioma</td><td>Solo macOS</td></tr>
+          <tr><td>Dictado del sistema</td><td>Incluido</td><td><span class="x">Depende del SO</span></td><td>Regular</td><td>El tuyo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota"># precios y características de referencia a julio 2026 — correginos con un issue si cambió algo</p>
+  </div>
+</section>
+
+<section id="descarga">
+  <div class="wrap">
+    <p class="kicker">descarga</p>
+    <h2>Llevate HABLA</h2>
+    <p class="lead">Instaladores compilados desde el código abierto, publicados en GitHub Releases.</p>
+    <div class="grid4">
+      <div class="card dl"><h3>Windows</h3><span class="fmt">.exe · .msi — x64 y ARM64</span><a class="btn btn-ambar" href="https://github.com/habla-voz/habla/releases/latest">↓ Descargar</a></div>
+      <div class="card dl"><h3>macOS</h3><span class="fmt">.dmg — Apple Silicon e Intel</span><a class="btn btn-ambar" href="https://github.com/habla-voz/habla/releases/latest">↓ Descargar</a></div>
+      <div class="card dl"><h3>Linux</h3><span class="fmt">.deb · .rpm · AppImage — x64 y ARM64</span><a class="btn btn-ambar" href="https://github.com/habla-voz/habla/releases/latest">↓ Descargar</a></div>
+    </div>
+    <p class="nota"># primera vez: otorgá permisos de micrófono (y accesibilidad en macOS) · hardware modesto → elegí Parakeet V3, corre en CPU a ~5x tiempo real</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="marca-final" aria-hidden="true"><b>¡</b>HABLA<b>!</b></div>
+    <div class="foot-grid">
+      <p><strong style="color:var(--hueso)">HABLA</strong> es un fork de <a href="https://github.com/cjpais/handy">Handy</a>, creado por CJ Pais y su comunidad (MIT). Sin afiliación, con gratitud: si HABLA te sirve, <a href="https://handy.computer/donate">apoyá al proyecto original</a>. Gracias a Whisper (OpenAI), Parakeet (NVIDIA), ggml, Silero y Tauri.</p>
+      <div class="foot-links">
+        <a href="https://github.com/habla-voz/habla">GitHub</a>
+        <a href="https://github.com/habla-voz/habla/issues">Reportar un problema</a>
+        <a href="https://github.com/habla-voz/habla/blob/main/marca/estrategia.md">La marca</a>
+      </div>
+    </div>
+    <div class="foot-fin">
+      <span>hecho en latinoamérica para el mundo</span>
+      <span>esta página no tiene trackers, ni cookies, ni analytics — como debe ser</span>
+      <span>© 2026 habla · licencia mit</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Detección de SO para el CTA (solo cambia la etiqueta; el link es el mismo)
+(function(){
+  const b=document.getElementById('cta-dl');
+  const u=navigator.userAgent;
+  let so='';
+  if(/Windows/i.test(u))so='para Windows';
+  else if(/Mac/i.test(u))so='para macOS';
+  else if(/Linux/i.test(u))so='para Linux';
+  if(so)b.textContent='↓ Descargar gratis '+so;
+})();
+
+// Máquina de escribir del hero
+(function(){
+  const frase='Refactorizame el servicio de pagos con el patrón repository y agregale tests, dale';
+  const el=document.getElementById('type'), done=document.getElementById('done');
+  let i=0;
+  function tic(){
+    if(i<=frase.length){
+      el.textContent=frase.slice(0,i); i++;
+      setTimeout(tic,i<12?60:22+Math.random()*40);
+    }else{
+      done.style.visibility='visible';
+      setTimeout(()=>{i=0;done.style.visibility='hidden';tic()},6000);
+    }
+  }
+  setTimeout(tic,600);
+})();
+
+// Duplicar la cinta para el loop infinito
+(function(){const m=document.getElementById('mq');m.innerHTML+=m.innerHTML;})();
+</script>
+</body>
+</html>

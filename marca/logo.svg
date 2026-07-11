@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 512" role="img" aria-label="¡HABLA">
+  <!-- Lockup horizontal: isotipo «¡» + wordmark. El wordmark se compone en Archivo Black;
+       fallback Arial Black para entornos sin la fuente. Versión sobre fondo oscuro. -->
+  <rect width="1180" height="512" rx="48" fill="#171310"/>
+  <g fill="#FFB300">
+    <circle cx="190" cy="150" r="74"/>
+    <rect x="150" y="268" width="80" height="164" rx="40"/>
+  </g>
+  <text x="320" y="352" font-family="Archivo Black, Arial Black, sans-serif" font-size="220" letter-spacing="-4" fill="#F4EDE3">HABLA</text>
+</svg>

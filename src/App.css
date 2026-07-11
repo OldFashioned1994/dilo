@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "./styles/theme.css";
 
+/* Archivo (Omnibus-Type, Buenos Aires) — fuente de marca, variable 100-900 */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/fonts/archivo-latin.woff2") format("woff2");
+}
+
 /* Register the shared color tokens (src/styles/theme.css) as Tailwind
    utilities */
 @theme inline {
@@ -15,6 +24,7 @@
 
 :root {
   /* Typography */
+  font-family: "Archivo", system-ui, "Segoe UI", sans-serif;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;

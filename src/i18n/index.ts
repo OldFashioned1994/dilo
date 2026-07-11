@@ -71,11 +71,11 @@ const getSupportedLanguage = (
   return supported ? supported.code : null;
 };
 
-// Initialize i18n with English as default
-// Language will be synced from settings after init
+// Initialize i18n with Spanish as default (HABLA habla español primero).
+// Language will be synced from settings/system locale after init.
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
+  lng: "es",
   fallbackLng: "en",
   interpolation: {
     escapeValue: false, // React already escapes values

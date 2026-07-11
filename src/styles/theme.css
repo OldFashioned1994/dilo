@@ -1,23 +1,26 @@
-/* Handy Colors */
+/* HABLA — Colores de marca
+   Consigna impresa, calidez de terminal: carbón + hueso + ámbar.
+   Ver marca/identidad-visual.md para roles y contrastes verificados. */
 
 :root {
   /* Palette source of truth. Each themed color is defined once as a
      light/dark pair; the active tokens below and the `data-theme` overrides
      in App.css reference these, so a hex value lives in exactly one place. */
-  --light-color-text: #0f0f0f;
-  --light-color-background: #fbfbfb;
-  --light-color-logo-primary: #faa2ca;
-  --light-color-logo-stroke: #382731;
+  --light-color-text: #171310;
+  --light-color-background: #f4ede3;
+  --light-color-logo-primary: #8a5800;
+  --light-color-logo-stroke: #171310;
 
-  --dark-color-text: #fbfbfb;
-  --dark-color-background: #2c2b29;
-  --dark-color-logo-primary: #f28cbb;
-  --dark-color-logo-stroke: #fad1ed;
+  --dark-color-text: #f4ede3;
+  --dark-color-background: #171310;
+  --dark-color-logo-primary: #ffb300;
+  --dark-color-logo-stroke: #f4ede3;
 
   /* Tokens that do not change between light and dark */
-  --color-background-ui: #da5893;
-  --color-text-stroke: #f6f6f6;
-  --color-mid-gray: #808080;
+  --color-background-ui: #ffb300;
+  --color-text-stroke: #171310;
+  --color-mid-gray: #8c7f6f;
+  --color-rec: #e5482f;
 
   /* Active palette — defaults to light, follows the OS via the media query
      below, or is forced by `data-theme` (see App.css). */
