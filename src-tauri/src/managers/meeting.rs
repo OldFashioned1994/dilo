@@ -136,8 +136,7 @@ impl MeetingManager {
                     }
                     let chunk_offset = meeting_start.elapsed().as_secs();
                     let generation = rm.cancel_generation();
-                    if let Err(e) = rm.try_start_recording(MEETING_BINDING_ID, VadPolicy::Offline)
-                    {
+                    if let Err(e) = rm.try_start_recording(MEETING_BINDING_ID, VadPolicy::Offline) {
                         error!("Meeting recording failed to start: {}", e);
                         let _ = app.emit("meeting-error", e);
                         cancel.store(true, Ordering::Relaxed);

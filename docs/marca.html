@@ -1,273 +1,871 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DILO — Manual de marca</title>
-<meta name="description" content="Sistema de identidad de DILO: estrategia, voz y sistema visual.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%23171310'/%3E%3Cg fill='%23FFB300'%3E%3Ccircle cx='256' cy='150' r='74'/%3E%3Crect x='216' y='268' width='80' height='164' rx='40'/%3E%3C/g%3E%3C/svg%3E">
-<style>
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/archivo.woff2) format('woff2')}
-@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/archivo-black.woff2) format('woff2')}
-@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url(fonts/jetbrains-mono.woff2) format('woff2')}
-:root{
-  --carbon:#171310; --surface:#201a15; --surface2:#262019; --borde:#2e261e;
-  --hueso:#f4ede3; --arena:#b9a88f; --ambar:#ffb300; --ambar2:#8a5800; --rec:#e5482f;
-  --display:'Archivo Black','Arial Black',sans-serif;
-  --body:'Archivo',system-ui,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--carbon);color:var(--hueso);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-::selection{background:var(--ambar);color:var(--carbon)}
-a{color:var(--ambar)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-section{padding:64px 0;border-bottom:1px solid var(--borde)}
-.kicker{font-family:var(--mono);color:var(--ambar);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
-h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1;margin-bottom:20px}
-h3{font-weight:800;font-size:1.05rem;margin:28px 0 10px;text-transform:uppercase;letter-spacing:.04em}
-p{color:var(--arena);max-width:680px}
-p strong,li strong{color:var(--hueso)}
-ul{color:var(--arena);padding-left:22px;max-width:680px}
-li{margin:6px 0}
-.mono{font-family:var(--mono);font-size:.85rem}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DILO — Manual de marca</title>
+    <meta
+      name="description"
+      content="Sistema de identidad de DILO: estrategia, voz y sistema visual."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%23171310'/%3E%3Cg fill='%23FFB300'%3E%3Ccircle cx='256' cy='150' r='74'/%3E%3Crect x='216' y='268' width='80' height='164' rx='40'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <style>
+      @font-face {
+        font-family: "Archivo";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(fonts/archivo.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: "Archivo Black";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(fonts/archivo-black.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: swap;
+        src: url(fonts/jetbrains-mono.woff2) format("woff2");
+      }
+      :root {
+        --carbon: #171310;
+        --surface: #201a15;
+        --surface2: #262019;
+        --borde: #2e261e;
+        --hueso: #f4ede3;
+        --arena: #b9a88f;
+        --ambar: #ffb300;
+        --ambar2: #8a5800;
+        --rec: #e5482f;
+        --display: "Archivo Black", "Arial Black", sans-serif;
+        --body: "Archivo", system-ui, sans-serif;
+        --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--carbon);
+        color: var(--hueso);
+        font-family: var(--body);
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::selection {
+        background: var(--ambar);
+        color: var(--carbon);
+      }
+      a {
+        color: var(--ambar);
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      section {
+        padding: 64px 0;
+        border-bottom: 1px solid var(--borde);
+      }
+      .kicker {
+        font-family: var(--mono);
+        color: var(--ambar);
+        font-size: 0.8rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+      h2 {
+        font-family: var(--display);
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: clamp(1.9rem, 4vw, 2.9rem);
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-weight: 800;
+        font-size: 1.05rem;
+        margin: 28px 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      p {
+        color: var(--arena);
+        max-width: 680px;
+      }
+      p strong,
+      li strong {
+        color: var(--hueso);
+      }
+      ul {
+        color: var(--arena);
+        padding-left: 22px;
+        max-width: 680px;
+      }
+      li {
+        margin: 6px 0;
+      }
+      .mono {
+        font-family: var(--mono);
+        font-size: 0.85rem;
+      }
 
-/* portada */
-.portada{padding:110px 0 90px;border-bottom:1px solid var(--borde)}
-.portada .mark{margin-bottom:36px}
-.portada h1{font-family:var(--display);font-weight:400;font-size:clamp(4rem,14vw,10rem);line-height:.9;letter-spacing:-.015em}
-.portada h1 span{color:var(--ambar)}
-.portada .sub{font-family:var(--mono);color:var(--arena);margin-top:26px;font-size:.9rem}
+      /* portada */
+      .portada {
+        padding: 110px 0 90px;
+        border-bottom: 1px solid var(--borde);
+      }
+      .portada .mark {
+        margin-bottom: 36px;
+      }
+      .portada h1 {
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: clamp(4rem, 14vw, 10rem);
+        line-height: 0.9;
+        letter-spacing: -0.015em;
+      }
+      .portada h1 span {
+        color: var(--ambar);
+      }
+      .portada .sub {
+        font-family: var(--mono);
+        color: var(--arena);
+        margin-top: 26px;
+        font-size: 0.9rem;
+      }
 
-/* grillas */
-.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:32px}
-.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:32px}
-.box{background:var(--surface);border:1px solid var(--borde);border-radius:14px;padding:24px}
-.box h4{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.05rem;margin-bottom:10px}
-.box p{font-size:.94rem;max-width:none}
-.chip{display:inline-block;font-family:var(--mono);font-size:.8rem;border:1px solid var(--borde);border-radius:999px;padding:5px 14px;margin:4px 6px 4px 0;color:var(--hueso)}
-.chip b{color:var(--ambar);font-weight:400}
+      /* grillas */
+      .g2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+      .g3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+      .box {
+        background: var(--surface);
+        border: 1px solid var(--borde);
+        border-radius: 14px;
+        padding: 24px;
+      }
+      .box h4 {
+        font-family: var(--display);
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+      }
+      .box p {
+        font-size: 0.94rem;
+        max-width: none;
+      }
+      .chip {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        border: 1px solid var(--borde);
+        border-radius: 999px;
+        padding: 5px 14px;
+        margin: 4px 6px 4px 0;
+        color: var(--hueso);
+      }
+      .chip b {
+        color: var(--ambar);
+        font-weight: 400;
+      }
 
-/* citas / posicionamiento */
-.quote{border-left:4px solid var(--ambar);padding:8px 0 8px 24px;margin:28px 0;font-size:1.25rem;color:var(--hueso);max-width:720px}
-.quote em{color:var(--ambar);font-style:normal}
+      /* citas / posicionamiento */
+      .quote {
+        border-left: 4px solid var(--ambar);
+        padding: 8px 0 8px 24px;
+        margin: 28px 0;
+        font-size: 1.25rem;
+        color: var(--hueso);
+        max-width: 720px;
+      }
+      .quote em {
+        color: var(--ambar);
+        font-style: normal;
+      }
 
-/* tabla tono */
-.tt{width:100%;border-collapse:collapse;margin-top:24px;font-size:.93rem}
-.tt th,.tt td{padding:13px 16px;border-bottom:1px solid var(--borde);text-align:left;vertical-align:top}
-.tt th{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--arena)}
-.tt td{color:var(--arena)}
-.tt td.si{color:var(--hueso)}
-.mal{color:var(--rec);text-decoration:line-through;text-decoration-thickness:1px}
+      /* tabla tono */
+      .tt {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 24px;
+        font-size: 0.93rem;
+      }
+      .tt th,
+      .tt td {
+        padding: 13px 16px;
+        border-bottom: 1px solid var(--borde);
+        text-align: left;
+        vertical-align: top;
+      }
+      .tt th {
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--arena);
+      }
+      .tt td {
+        color: var(--arena);
+      }
+      .tt td.si {
+        color: var(--hueso);
+      }
+      .mal {
+        color: var(--rec);
+        text-decoration: line-through;
+        text-decoration-thickness: 1px;
+      }
 
-/* logo variantes */
-.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:32px}
-.logo-tile{border:1px solid var(--borde);border-radius:14px;padding:36px 20px;display:flex;align-items:center;justify-content:center;min-height:150px;position:relative}
-.logo-tile .tag{position:absolute;bottom:10px;left:14px;font-family:var(--mono);font-size:.72rem;color:var(--arena)}
-.lt-dark{background:var(--carbon)}
-.lt-light{background:var(--hueso)}
-.lt-light .tag{color:#6e6155}
-.lt-ambar{background:var(--ambar)}
-.lt-ambar .tag{color:#5c3c00}
-.wordmark{font-family:var(--display);font-weight:400;font-size:2.6rem;letter-spacing:-.02em}
+      /* logo variantes */
+      .logos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+      .logo-tile {
+        border: 1px solid var(--borde);
+        border-radius: 14px;
+        padding: 36px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 150px;
+        position: relative;
+      }
+      .logo-tile .tag {
+        position: absolute;
+        bottom: 10px;
+        left: 14px;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        color: var(--arena);
+      }
+      .lt-dark {
+        background: var(--carbon);
+      }
+      .lt-light {
+        background: var(--hueso);
+      }
+      .lt-light .tag {
+        color: #6e6155;
+      }
+      .lt-ambar {
+        background: var(--ambar);
+      }
+      .lt-ambar .tag {
+        color: #5c3c00;
+      }
+      .wordmark {
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: 2.6rem;
+        letter-spacing: -0.02em;
+      }
 
-/* swatches */
-.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:32px}
-.sw{border-radius:14px;border:1px solid var(--borde);overflow:hidden}
-.sw .c{height:92px}
-.sw .i{padding:12px 14px;background:var(--surface)}
-.sw .i b{display:block;font-size:.9rem}
-.sw .i span{font-family:var(--mono);font-size:.75rem;color:var(--arena)}
+      /* swatches */
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+        margin-top: 32px;
+      }
+      .sw {
+        border-radius: 14px;
+        border: 1px solid var(--borde);
+        overflow: hidden;
+      }
+      .sw .c {
+        height: 92px;
+      }
+      .sw .i {
+        padding: 12px 14px;
+        background: var(--surface);
+      }
+      .sw .i b {
+        display: block;
+        font-size: 0.9rem;
+      }
+      .sw .i span {
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--arena);
+      }
 
-/* tipografía */
-.specimen{margin-top:28px;border:1px solid var(--borde);border-radius:14px;padding:32px;background:var(--surface)}
-.specimen .big{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.4rem);line-height:.95;text-transform:uppercase}
-.specimen .med{font-size:1.25rem;margin-top:18px;color:var(--hueso)}
-.specimen .mono{margin-top:18px;color:var(--ambar)}
-.specimen .meta{font-family:var(--mono);font-size:.75rem;color:var(--arena);margin-top:14px;border-top:1px solid var(--borde);padding-top:12px}
+      /* tipografía */
+      .specimen {
+        margin-top: 28px;
+        border: 1px solid var(--borde);
+        border-radius: 14px;
+        padding: 32px;
+        background: var(--surface);
+      }
+      .specimen .big {
+        font-family: var(--display);
+        font-size: clamp(2.4rem, 6vw, 4.4rem);
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+      .specimen .med {
+        font-size: 1.25rem;
+        margin-top: 18px;
+        color: var(--hueso);
+      }
+      .specimen .mono {
+        margin-top: 18px;
+        color: var(--ambar);
+      }
+      .specimen .meta {
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--arena);
+        margin-top: 14px;
+        border-top: 1px solid var(--borde);
+        padding-top: 12px;
+      }
 
-/* dos y donts */
-.dd{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:32px}
-.dd .box{border-top:3px solid #7fb069}
-.dd .box.no{border-top-color:var(--rec)}
-.dd li{font-size:.94rem}
+      /* dos y donts */
+      .dd {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+      .dd .box {
+        border-top: 3px solid #7fb069;
+      }
+      .dd .box.no {
+        border-top-color: var(--rec);
+      }
+      .dd li {
+        font-size: 0.94rem;
+      }
 
-/* aplicaciones */
-.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:32px}
-.app-term{background:var(--surface);border:1px solid var(--borde);border-radius:14px;overflow:hidden}
-.app-term .bar{padding:10px 14px;border-bottom:1px solid var(--borde);font-family:var(--mono);font-size:.72rem;color:var(--arena)}
-.app-term .bd{padding:18px;font-family:var(--mono);font-size:.82rem;line-height:1.8}
-.btn-demo{display:inline-block;background:var(--ambar);color:var(--carbon);font-weight:800;border-radius:12px;padding:13px 24px;box-shadow:0 6px 0 var(--ambar2)}
-.post{background:var(--surface);border:1px solid var(--borde);border-radius:14px;padding:22px;font-size:.93rem;color:var(--arena)}
-.post b{color:var(--hueso)}
-.eqd{display:inline-flex;align-items:flex-end;gap:3px;height:16px;margin-right:8px}
-.eqd i{width:4px;background:var(--ambar);border-radius:2px}
-.eqd i:nth-child(1){height:40%}.eqd i:nth-child(2){height:70%}.eqd i:nth-child(3){height:100%}.eqd i:nth-child(4){height:55%}.eqd i:nth-child(5){height:30%}
+      /* aplicaciones */
+      .apps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+      .app-term {
+        background: var(--surface);
+        border: 1px solid var(--borde);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .app-term .bar {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--borde);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        color: var(--arena);
+      }
+      .app-term .bd {
+        padding: 18px;
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        line-height: 1.8;
+      }
+      .btn-demo {
+        display: inline-block;
+        background: var(--ambar);
+        color: var(--carbon);
+        font-weight: 800;
+        border-radius: 12px;
+        padding: 13px 24px;
+        box-shadow: 0 6px 0 var(--ambar2);
+      }
+      .post {
+        background: var(--surface);
+        border: 1px solid var(--borde);
+        border-radius: 14px;
+        padding: 22px;
+        font-size: 0.93rem;
+        color: var(--arena);
+      }
+      .post b {
+        color: var(--hueso);
+      }
+      .eqd {
+        display: inline-flex;
+        align-items: flex-end;
+        gap: 3px;
+        height: 16px;
+        margin-right: 8px;
+      }
+      .eqd i {
+        width: 4px;
+        background: var(--ambar);
+        border-radius: 2px;
+      }
+      .eqd i:nth-child(1) {
+        height: 40%;
+      }
+      .eqd i:nth-child(2) {
+        height: 70%;
+      }
+      .eqd i:nth-child(3) {
+        height: 100%;
+      }
+      .eqd i:nth-child(4) {
+        height: 55%;
+      }
+      .eqd i:nth-child(5) {
+        height: 30%;
+      }
 
-footer{padding:56px 0;font-family:var(--mono);font-size:.78rem;color:var(--arena)}
-</style>
-</head>
-<body>
-
-<header class="portada">
-  <div class="wrap">
-    <div class="mark">
-      <svg width="64" height="64" viewBox="0 0 512 512"><g fill="#FFB300"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg>
-    </div>
-    <h1><span>¡</span>DILO</h1>
-    <p class="sub">manual de marca · v1 · julio 2026 · OldFashioned1994/dilo</p>
-  </div>
-</header>
-
-<section>
-  <div class="wrap">
-    <p class="kicker">esencia</p>
-    <h2>Tu voz es tuya</h2>
-    <p>Tres lecturas, las tres ciertas:</p>
-    <ul>
-      <li><strong>Literal:</strong> el audio nunca sale de tu compu — transcripción 100% local.</li>
-      <li><strong>Idiomática:</strong> hablás en tu español, con tu acento, y funciona.</li>
-      <li><strong>Política:</strong> software libre. Nadie te alquila tu propia voz.</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="kicker">estrategia</p>
-    <h2>Una idea, no una estética</h2>
-    <div class="quote">Para devs de Latinoamérica que programan con IA, <em>DILO</em> es el dictado por voz libre, gratis y 100% offline que convierte lo que decís en texto dentro de cualquier app — porque corre en tu propia máquina.</div>
-    <div class="g2">
-      <div class="box"><h4>El insight</h4><p>El que programa con IA ya no escribe código: escribe <strong>párrafos</strong>. Hablar es 3–4× más rápido que tipear, pero las herramientas buenas son pagas en dólares, piensan en inglés y suben tu voz a la nube. El dev latino queda afuera tres veces: precio, idioma, privacidad.</p></div>
-      <div class="box"><h4>El arquetipo</h4><p><strong>Forajido</strong> (dominante): existe contra la suscripción, el "English only" y la nube. <strong>Común</strong> (secundario): es de acá, habla como nosotros, sin solemnidad. No es rebeldía estética: es la razón de ser del producto.</p></div>
-    </div>
-    <h3>Personalidad</h3>
-    <span class="chip"><b>01</b> directa</span>
-    <span class="chip"><b>02</b> cercana</span>
-    <span class="chip"><b>03</b> rebelde con causa</span>
-    <span class="chip"><b>04</b> técnica sin solemnidad</span>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="kicker">identidad verbal</p>
-    <h2>No lo tipees. Dilo.</h2>
-    <p>Tagline principal. Descriptor: <strong>dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica.</strong> Español neutro-LatAm con tuteo suave en textos que viajan; voseo para redes y comunidad. Nunca "vosotros".</p>
-    <table class="tt">
-      <thead><tr><th>Así no</th><th>Así sí</th></tr></thead>
-      <tbody>
-        <tr><td><span class="mal">Nuestra solución de IA empodera a los desarrolladores a transformar su productividad.</span></td><td class="si">Hablás. Aparece escrito. Seguís programando.</td></tr>
-        <tr><td><span class="mal">Prueba gratuita por tiempo limitado.</span></td><td class="si">Gratis. No "gratis por 14 días". Gratis.</td></tr>
-        <tr><td><span class="mal">Tecnología de vanguardia impulsada por IA.</span></td><td class="si">Whisper corriendo en tu máquina. Nada viaja a ningún lado.</td></tr>
-      </tbody>
-    </table>
-    <h3>Léxico</h3>
-    <p><strong>Sí:</strong> tipear · compu · gratis · libre · de una · prompt · la terminal · tu voz · offline · fork · comunidad<br>
-    <strong>No:</strong> empoderar · revolucionar · disruptivo · solución · sinergia · "impulsado por IA" · monetizar · vosotros</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="kicker">identidad visual</p>
-    <h2>Consigna impresa, calidez de terminal</h2>
-    <p>La marca se ve como se oye: un grito corto y bien impreso — cartel de consigna, tipografía negra y compacta — sobre el ámbar cálido de las terminales fósforo de los 80. Tinta y fósforo; nada de gradientes ni blobs.</p>
-
-    <h3>El isotipo: «¡»</h3>
-    <p>El signo de apertura de exclamación <strong>solo existe en español</strong>. Dibujado con la cápsula arriba y el mango abajo, <strong>es un micrófono</strong>. La marca entera en un glifo: un micrófono que solo nosotros tenemos. Ahí va toda la audacia; el resto del sistema es disciplinado.</p>
-
-    <div class="logos">
-      <div class="logo-tile lt-dark"><span class="tag">principal / oscuro</span>
-        <div style="display:flex;align-items:center;gap:14px"><svg width="40" height="40" viewBox="0 0 512 512"><g fill="#FFB300"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg><span class="wordmark" style="color:#F4EDE3">DILO</span></div>
+      footer {
+        padding: 56px 0;
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--arena);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="portada">
+      <div class="wrap">
+        <div class="mark">
+          <svg width="64" height="64" viewBox="0 0 512 512">
+            <g fill="#FFB300">
+              <circle cx="256" cy="150" r="74" />
+              <rect x="216" y="268" width="80" height="164" rx="40" />
+            </g>
+          </svg>
+        </div>
+        <h1><span>¡</span>DILO</h1>
+        <p class="sub">
+          manual de marca · v1 · julio 2026 · OldFashioned1994/dilo
+        </p>
       </div>
-      <div class="logo-tile lt-light"><span class="tag">sobre claro (ámbar tostado)</span>
-        <div style="display:flex;align-items:center;gap:14px"><svg width="40" height="40" viewBox="0 0 512 512"><g fill="#8A5800"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg><span class="wordmark" style="color:#171310">DILO</span></div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <p class="kicker">esencia</p>
+        <h2>Tu voz es tuya</h2>
+        <p>Tres lecturas, las tres ciertas:</p>
+        <ul>
+          <li>
+            <strong>Literal:</strong> el audio nunca sale de tu compu —
+            transcripción 100% local.
+          </li>
+          <li>
+            <strong>Idiomática:</strong> hablás en tu español, con tu acento, y
+            funciona.
+          </li>
+          <li>
+            <strong>Política:</strong> software libre. Nadie te alquila tu
+            propia voz.
+          </li>
+        </ul>
       </div>
-      <div class="logo-tile lt-ambar"><span class="tag">sobre ámbar / monocromo</span>
-        <div style="display:flex;align-items:center;gap:14px"><svg width="40" height="40" viewBox="0 0 512 512"><g fill="#171310"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg><span class="wordmark" style="color:#171310">DILO</span></div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="kicker">estrategia</p>
+        <h2>Una idea, no una estética</h2>
+        <div class="quote">
+          Para devs de Latinoamérica que programan con IA, <em>DILO</em> es el
+          dictado por voz libre, gratis y 100% offline que convierte lo que
+          decís en texto dentro de cualquier app — porque corre en tu propia
+          máquina.
+        </div>
+        <div class="g2">
+          <div class="box">
+            <h4>El insight</h4>
+            <p>
+              El que programa con IA ya no escribe código: escribe
+              <strong>párrafos</strong>. Hablar es 3–4× más rápido que tipear,
+              pero las herramientas buenas son pagas en dólares, piensan en
+              inglés y suben tu voz a la nube. El dev latino queda afuera tres
+              veces: precio, idioma, privacidad.
+            </p>
+          </div>
+          <div class="box">
+            <h4>El arquetipo</h4>
+            <p>
+              <strong>Forajido</strong> (dominante): existe contra la
+              suscripción, el "English only" y la nube.
+              <strong>Común</strong> (secundario): es de acá, habla como
+              nosotros, sin solemnidad. No es rebeldía estética: es la razón de
+              ser del producto.
+            </p>
+          </div>
+        </div>
+        <h3>Personalidad</h3>
+        <span class="chip"><b>01</b> directa</span>
+        <span class="chip"><b>02</b> cercana</span>
+        <span class="chip"><b>03</b> rebelde con causa</span>
+        <span class="chip"><b>04</b> técnica sin solemnidad</span>
       </div>
-      <div class="logo-tile lt-dark"><span class="tag">isotipo solo / app icon</span>
-        <svg width="72" height="72" viewBox="0 0 512 512"><rect width="512" height="512" rx="115" fill="#201A15" stroke="#2E261E"/><g fill="#FFB300"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="kicker">identidad verbal</p>
+        <h2>No lo tipees. Dilo.</h2>
+        <p>
+          Tagline principal. Descriptor:
+          <strong
+            >dictado por voz libre, gratis y 100% offline, hecho para
+            Latinoamérica.</strong
+          >
+          Español neutro-LatAm con tuteo suave en textos que viajan; voseo para
+          redes y comunidad. Nunca "vosotros".
+        </p>
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>Así no</th>
+              <th>Así sí</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="mal"
+                  >Nuestra solución de IA empodera a los desarrolladores a
+                  transformar su productividad.</span
+                >
+              </td>
+              <td class="si">Hablás. Aparece escrito. Seguís programando.</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="mal">Prueba gratuita por tiempo limitado.</span>
+              </td>
+              <td class="si">Gratis. No "gratis por 14 días". Gratis.</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="mal"
+                  >Tecnología de vanguardia impulsada por IA.</span
+                >
+              </td>
+              <td class="si">
+                Whisper corriendo en tu máquina. Nada viaja a ningún lado.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Léxico</h3>
+        <p>
+          <strong>Sí:</strong> tipear · compu · gratis · libre · de una · prompt
+          · la terminal · tu voz · offline · fork · comunidad<br />
+          <strong>No:</strong> empoderar · revolucionar · disruptivo · solución
+          · sinergia · "impulsado por IA" · monetizar · vosotros
+        </p>
       </div>
-    </div>
-    <p class="mono" style="margin-top:14px">área de protección: ½ del diámetro de la cápsula · tamaño mínimo: 16 px · «¡DILO!» solo en piezas festivas, nunca en UI</p>
+    </section>
 
-    <h3>Color</h3>
-    <div class="swatches">
-      <div class="sw"><div class="c" style="background:#171310"></div><div class="i"><b>Carbón</b><span>#171310 — fondo oscuro / tinta. Nunca #000.</span></div></div>
-      <div class="sw"><div class="c" style="background:#F4EDE3"></div><div class="i"><b>Hueso</b><span>#F4EDE3 — fondo claro / texto sobre oscuro. Nunca #FFF.</span></div></div>
-      <div class="sw"><div class="c" style="background:#FFB300"></div><div class="i"><b>Ámbar</b><span>#FFB300 — acento sobre oscuro. 10.3:1 sobre Carbón.</span></div></div>
-      <div class="sw"><div class="c" style="background:#8A5800"></div><div class="i"><b>Ámbar tostado</b><span>#8A5800 — acento/links sobre claro. 5.2:1 AA.</span></div></div>
-      <div class="sw"><div class="c" style="background:#E5482F"></div><div class="i"><b>Rojo REC</b><span>#E5482F — solo estado de grabación.</span></div></div>
-      <div class="sw"><div class="c" style="background:#B9A88F"></div><div class="i"><b>Arena claro</b><span>#B9A88F — texto secundario sobre oscuro. 8:1.</span></div></div>
-      <div class="sw"><div class="c" style="background:#6E6155"></div><div class="i"><b>Arena</b><span>#6E6155 — texto secundario sobre claro. 5.2:1 AA.</span></div></div>
-      <div class="sw"><div class="c" style="background:#201A15"></div><div class="i"><b>Superficie</b><span>#201A15 oscuro · #FBF7F0 claro — cards y paneles.</span></div></div>
-    </div>
-    <p class="mono" style="margin-top:14px">regla dura: el ámbar puro nunca lleva texto encima en modo claro · el rojo REC nunca es decorativo</p>
+    <section>
+      <div class="wrap">
+        <p class="kicker">identidad visual</p>
+        <h2>Consigna impresa, calidez de terminal</h2>
+        <p>
+          La marca se ve como se oye: un grito corto y bien impreso — cartel de
+          consigna, tipografía negra y compacta — sobre el ámbar cálido de las
+          terminales fósforo de los 80. Tinta y fósforo; nada de gradientes ni
+          blobs.
+        </p>
 
-    <h3>Tipografía</h3>
-    <div class="specimen">
-      <div class="big">Archivo Black<br><span style="color:var(--ambar)">¡Hecha en Buenos Aires!</span></div>
-      <div class="med">Archivo — texto y UI. La familia completa es de Omnibus-Type (Buenos Aires), libre (SIL OFL). Componer la marca en tipografía latinoamericana libre no es un detalle: es coherencia.</div>
-      <div class="mono">JetBrains Mono — código, atajos, letra chica. $ dilo --toggle-transcription</div>
-      <div class="meta">display: Archivo Black · texto: Archivo 400–800 · mono: JetBrains Mono · titulares en mayúsculas, tracking −1% a −2% · escala 1.25</div>
-    </div>
+        <h3>El isotipo: «¡»</h3>
+        <p>
+          El signo de apertura de exclamación
+          <strong>solo existe en español</strong>. Dibujado con la cápsula
+          arriba y el mango abajo, <strong>es un micrófono</strong>. La marca
+          entera en un glifo: un micrófono que solo nosotros tenemos. Ahí va
+          toda la audacia; el resto del sistema es disciplinado.
+        </p>
 
-    <h3>Sistema gráfico</h3>
-    <div class="g3">
-      <div class="box"><h4><span class="eqd"><i></i><i></i><i></i><i></i><i></i></span>Ondas</h4><p>5 barras verticales (40/70/100/55/30%): ecualizador de voz. Separador, bullet o estado "escuchando".</p></div>
-      <div class="box"><h4 style="color:var(--ambar)">&gt;_</h4><p>El prompt: «&gt;» inicial en titulares técnicos y snippets, siempre en ámbar.</p></div>
-      <div class="box"><h4>Grilla 8px</h4><p>Esquinas 12–16 px (la cápsula del «¡» marca el radio máximo). Nada de stock corporativo: capturas reales de terminal y editor.</p></div>
-    </div>
-  </div>
-</section>
+        <div class="logos">
+          <div class="logo-tile lt-dark">
+            <span class="tag">principal / oscuro</span>
+            <div style="display: flex; align-items: center; gap: 14px">
+              <svg width="40" height="40" viewBox="0 0 512 512">
+                <g fill="#FFB300">
+                  <circle cx="256" cy="150" r="74" />
+                  <rect x="216" y="268" width="80" height="164" rx="40" />
+                </g></svg
+              ><span class="wordmark" style="color: #f4ede3">DILO</span>
+            </div>
+          </div>
+          <div class="logo-tile lt-light">
+            <span class="tag">sobre claro (ámbar tostado)</span>
+            <div style="display: flex; align-items: center; gap: 14px">
+              <svg width="40" height="40" viewBox="0 0 512 512">
+                <g fill="#8A5800">
+                  <circle cx="256" cy="150" r="74" />
+                  <rect x="216" y="268" width="80" height="164" rx="40" />
+                </g></svg
+              ><span class="wordmark" style="color: #171310">DILO</span>
+            </div>
+          </div>
+          <div class="logo-tile lt-ambar">
+            <span class="tag">sobre ámbar / monocromo</span>
+            <div style="display: flex; align-items: center; gap: 14px">
+              <svg width="40" height="40" viewBox="0 0 512 512">
+                <g fill="#171310">
+                  <circle cx="256" cy="150" r="74" />
+                  <rect x="216" y="268" width="80" height="164" rx="40" />
+                </g></svg
+              ><span class="wordmark" style="color: #171310">DILO</span>
+            </div>
+          </div>
+          <div class="logo-tile lt-dark">
+            <span class="tag">isotipo solo / app icon</span>
+            <svg width="72" height="72" viewBox="0 0 512 512">
+              <rect
+                width="512"
+                height="512"
+                rx="115"
+                fill="#201A15"
+                stroke="#2E261E"
+              />
+              <g fill="#FFB300">
+                <circle cx="256" cy="150" r="74" />
+                <rect x="216" y="268" width="80" height="164" rx="40" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <p class="mono" style="margin-top: 14px">
+          área de protección: ½ del diámetro de la cápsula · tamaño mínimo: 16
+          px · «¡DILO!» solo en piezas festivas, nunca en UI
+        </p>
 
-<section>
-  <div class="wrap">
-    <p class="kicker">reglas</p>
-    <h2>Do &amp; don't</h2>
-    <div class="dd">
-      <div class="box"><h4>✓ Sí</h4><ul>
-        <li>Ámbar sobre Carbón; «¡» como bullet o marcador.</li>
-        <li>Humor seco en micro-copy; datos concretos en cada golpe.</li>
-        <li>Capturas reales de terminal/editor sobre Carbón.</li>
-        <li>Acreditar siempre a Handy (CJ Pais, MIT), sin implicar afiliación.</li>
-      </ul></div>
-      <div class="box no"><h4>✗ No</h4><ul>
-        <li>Gradiente violeta→celeste, blobs, glassmorphism, mock 3D.</li>
-        <li>Rosa Handy (#faa2ca): esa marca no es nuestra y su licencia lo prohíbe.</li>
-        <li>Texto ámbar sobre fondo claro (usar Ámbar tostado).</li>
-        <li>Banderitas de países: LatAm se dice con el idioma y el «¡».</li>
-        <li>Empoderar, revolucionar, "impulsado por IA".</li>
-      </ul></div>
-    </div>
-  </div>
-</section>
+        <h3>Color</h3>
+        <div class="swatches">
+          <div class="sw">
+            <div class="c" style="background: #171310"></div>
+            <div class="i">
+              <b>Carbón</b
+              ><span>#171310 — fondo oscuro / tinta. Nunca #000.</span>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #f4ede3"></div>
+            <div class="i">
+              <b>Hueso</b
+              ><span
+                >#F4EDE3 — fondo claro / texto sobre oscuro. Nunca #FFF.</span
+              >
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #ffb300"></div>
+            <div class="i">
+              <b>Ámbar</b
+              ><span>#FFB300 — acento sobre oscuro. 10.3:1 sobre Carbón.</span>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #8a5800"></div>
+            <div class="i">
+              <b>Ámbar tostado</b
+              ><span>#8A5800 — acento/links sobre claro. 5.2:1 AA.</span>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #e5482f"></div>
+            <div class="i">
+              <b>Rojo REC</b><span>#E5482F — solo estado de grabación.</span>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #b9a88f"></div>
+            <div class="i">
+              <b>Arena claro</b
+              ><span>#B9A88F — texto secundario sobre oscuro. 8:1.</span>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #6e6155"></div>
+            <div class="i">
+              <b>Arena</b
+              ><span>#6E6155 — texto secundario sobre claro. 5.2:1 AA.</span>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="c" style="background: #201a15"></div>
+            <div class="i">
+              <b>Superficie</b
+              ><span>#201A15 oscuro · #FBF7F0 claro — cards y paneles.</span>
+            </div>
+          </div>
+        </div>
+        <p class="mono" style="margin-top: 14px">
+          regla dura: el ámbar puro nunca lleva texto encima en modo claro · el
+          rojo REC nunca es decorativo
+        </p>
 
-<section>
-  <div class="wrap">
-    <p class="kicker">aplicaciones</p>
-    <h2>La marca en uso</h2>
-    <div class="apps">
-      <div class="app-term">
-        <div class="bar">~/mi-proyecto — DILO</div>
-        <div class="bd"><span style="color:var(--ambar)">$</span> <span style="background:var(--surface2);border:1px solid var(--borde);border-radius:5px;padding:1px 7px">F9</span> <span style="color:var(--rec);font-weight:700">● grabando</span><br><span style="color:var(--ambar)">&gt;</span> "Creame el componente y…"<br><span style="color:#7fb069">✓</span> <span style="color:var(--arena)">transcripto — local, sin internet</span></div>
+        <h3>Tipografía</h3>
+        <div class="specimen">
+          <div class="big">
+            Archivo Black<br /><span style="color: var(--ambar)"
+              >¡Hecha en Buenos Aires!</span
+            >
+          </div>
+          <div class="med">
+            Archivo — texto y UI. La familia completa es de Omnibus-Type (Buenos
+            Aires), libre (SIL OFL). Componer la marca en tipografía
+            latinoamericana libre no es un detalle: es coherencia.
+          </div>
+          <div class="mono">
+            JetBrains Mono — código, atajos, letra chica. $ dilo
+            --toggle-transcription
+          </div>
+          <div class="meta">
+            display: Archivo Black · texto: Archivo 400–800 · mono: JetBrains
+            Mono · titulares en mayúsculas, tracking −1% a −2% · escala 1.25
+          </div>
+        </div>
+
+        <h3>Sistema gráfico</h3>
+        <div class="g3">
+          <div class="box">
+            <h4>
+              <span class="eqd"><i></i><i></i><i></i><i></i><i></i></span>Ondas
+            </h4>
+            <p>
+              5 barras verticales (40/70/100/55/30%): ecualizador de voz.
+              Separador, bullet o estado "escuchando".
+            </p>
+          </div>
+          <div class="box">
+            <h4 style="color: var(--ambar)">&gt;_</h4>
+            <p>
+              El prompt: «&gt;» inicial en titulares técnicos y snippets,
+              siempre en ámbar.
+            </p>
+          </div>
+          <div class="box">
+            <h4>Grilla 8px</h4>
+            <p>
+              Esquinas 12–16 px (la cápsula del «¡» marca el radio máximo). Nada
+              de stock corporativo: capturas reales de terminal y editor.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="box" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;justify-content:center">
-        <span class="btn-demo">↓ Descargar gratis</span>
-        <span class="mono" style="color:var(--arena)">botón primario: ámbar, sombra dura #8A5800, radio 12</span>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="kicker">reglas</p>
+        <h2>Do &amp; don't</h2>
+        <div class="dd">
+          <div class="box">
+            <h4>✓ Sí</h4>
+            <ul>
+              <li>Ámbar sobre Carbón; «¡» como bullet o marcador.</li>
+              <li>Humor seco en micro-copy; datos concretos en cada golpe.</li>
+              <li>Capturas reales de terminal/editor sobre Carbón.</li>
+              <li>
+                Acreditar siempre a Handy (CJ Pais, MIT), sin implicar
+                afiliación.
+              </li>
+            </ul>
+          </div>
+          <div class="box no">
+            <h4>✗ No</h4>
+            <ul>
+              <li>Gradiente violeta→celeste, blobs, glassmorphism, mock 3D.</li>
+              <li>
+                Rosa Handy (#faa2ca): esa marca no es nuestra y su licencia lo
+                prohíbe.
+              </li>
+              <li>Texto ámbar sobre fondo claro (usar Ámbar tostado).</li>
+              <li>
+                Banderitas de países: LatAm se dice con el idioma y el «¡».
+              </li>
+              <li>Empoderar, revolucionar, "impulsado por IA".</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="post"><b>Post de lanzamiento —</b> "Cerré la suscripción de dictado en dólares. Apreto F9, hablo, y el prompt aparece en Cursor. Local, en español, gratis. Se llama DILO y es open source →"</div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer>
-  <div class="wrap">
-    DILO · manual de marca v1 · julio 2026 — fork de Handy (CJ Pais, MIT) con marca propia · docs/marca.html
-  </div>
-</footer>
+    <section>
+      <div class="wrap">
+        <p class="kicker">aplicaciones</p>
+        <h2>La marca en uso</h2>
+        <div class="apps">
+          <div class="app-term">
+            <div class="bar">~/mi-proyecto — DILO</div>
+            <div class="bd">
+              <span style="color: var(--ambar)">$</span>
+              <span
+                style="
+                  background: var(--surface2);
+                  border: 1px solid var(--borde);
+                  border-radius: 5px;
+                  padding: 1px 7px;
+                "
+                >F9</span
+              >
+              <span style="color: var(--rec); font-weight: 700">● grabando</span
+              ><br /><span style="color: var(--ambar)">&gt;</span> "Creame el
+              componente y…"<br /><span style="color: #7fb069">✓</span>
+              <span style="color: var(--arena)"
+                >transcripto — local, sin internet</span
+              >
+            </div>
+          </div>
+          <div
+            class="box"
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              align-items: flex-start;
+              justify-content: center;
+            "
+          >
+            <span class="btn-demo">↓ Descargar gratis</span>
+            <span class="mono" style="color: var(--arena)"
+              >botón primario: ámbar, sombra dura #8A5800, radio 12</span
+            >
+          </div>
+          <div class="post">
+            <b>Post de lanzamiento —</b> "Cerré la suscripción de dictado en
+            dólares. Apreto F9, hablo, y el prompt aparece en Cursor. Local, en
+            español, gratis. Se llama DILO y es open source →"
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <footer>
+      <div class="wrap">
+        DILO · manual de marca v1 · julio 2026 — fork de Handy (CJ Pais, MIT)
+        con marca propia · docs/marca.html
+      </div>
+    </footer>
+  </body>
 </html>

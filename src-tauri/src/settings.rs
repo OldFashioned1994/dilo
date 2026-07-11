@@ -884,6 +884,7 @@ pub fn get_default_settings() -> AppSettings {
         post_process_models: default_post_process_models(),
         post_process_prompts: default_post_process_prompts(),
         post_process_selected_prompt_id: None,
+        meeting_minutes_prompt: default_meeting_minutes_prompt(),
         mute_while_recording: false,
         append_trailing_space: false,
         app_language: default_app_language(),

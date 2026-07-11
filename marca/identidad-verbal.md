@@ -9,7 +9,7 @@
   termina en el nombre: cada vez que se dice el tagline, se dice la marca.
 - Cuatro letras, tuteo neutro-LatAm, se escribe como se pronuncia. En voseo sería
   "decilo": se usa como guiño en redes ("decilo, che"), nunca en UI.
-- Cierra con la esencia (*tu voz es tuya*): lo que tenés para decir, decilo — y
+- Cierra con la esencia (_tu voz es tuya_): lo que tenés para decir, decilo — y
   que quede escrito.
 - Disponibilidad: chequeada 2026-07-11 — existe "DiLo", una app menor de
   pronunciación/traducción en Google Play (espacio distinto, sin marca fuerte);
@@ -23,17 +23,17 @@ Nombres técnicos: binario `dilo`, identificador `com.dilo.app`, repo
 
 **No lo tipees. Dilo.**
 
-Secundario (descriptor): *Dictado por voz libre, gratis y 100% offline, hecho
-para Latinoamérica.*
+Secundario (descriptor): _Dictado por voz libre, gratis y 100% offline, hecho
+para Latinoamérica._
 
 ## Tono de voz
 
-| Dimensión | Posición | Ejemplo |
-|---|---|---|
-| Cercano ↔ Formal | Cercano (85/15) | "Tu voz no sale de tu compu. Punto." |
-| Con humor ↔ Serio | Humor seco (60/40) | "Tu micrófono ya sabía español. Ahora tu compu también." |
-| Activista ↔ Neutro | Activista con datos (70/30) | "Las otras cobran USD 12 por mes por escuchar tu voz en un servidor ajeno. DILO es gratis y no escucha nadie." |
-| Técnico ↔ Simple | Simple por fuera, técnico al fondo | Titular simple; specs (Whisper, Parakeet, VAD) en la letra chica para el que quiere saber. |
+| Dimensión          | Posición                           | Ejemplo                                                                                                        |
+| ------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Cercano ↔ Formal   | Cercano (85/15)                    | "Tu voz no sale de tu compu. Punto."                                                                           |
+| Con humor ↔ Serio  | Humor seco (60/40)                 | "Tu micrófono ya sabía español. Ahora tu compu también."                                                       |
+| Activista ↔ Neutro | Activista con datos (70/30)        | "Las otras cobran USD 12 por mes por escuchar tu voz en un servidor ajeno. DILO es gratis y no escucha nadie." |
+| Técnico ↔ Simple   | Simple por fuera, técnico al fondo | Titular simple; specs (Whisper, Parakeet, VAD) en la letra chica para el que quiere saber.                     |
 
 El mismo mensaje, mal y bien:
 

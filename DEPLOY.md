@@ -25,7 +25,7 @@ git push -u origin main
 
 ## 2 · Activar la landing (GitHub Pages)
 
-La landing vive en `docs/`. En **Settings → Pages**: Source = *Deploy from a branch*,
+La landing vive en `docs/`. En **Settings → Pages**: Source = _Deploy from a branch_,
 Branch = `main`, carpeta `/docs`. En ~1 minuto queda viva en:
 
 **https://oldfashioned1994.github.io/dilo/**
