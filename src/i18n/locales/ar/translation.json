@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "الأذونات المطلوبة",
-      "description": ".يحتاج HABLA إلى بعض الأذونات ليعمل بشكل صحيح",
+      "description": ".يحتاج DILO إلى بعض الأذونات ليعمل بشكل صحيح",
       "microphone": {
         "title": "الوصول إلى الميكروفون",
         "description": ".مطلوب لسماع صوتك من أجل التفريغ الصوتي"
@@ -157,7 +157,7 @@
     "general": {
       "title": "عام",
       "shortcut": {
-        "title": "اختصارات HABLA",
+        "title": "اختصارات DILO",
         "description": "إعداد اختصارات لوحة المفاتيح لبدء تسجيل التفريغ الصوتي",
         "loading": "...جاري تحميل الاختصارات",
         "none": "لا توجد اختصارات مجهزة",
@@ -253,11 +253,11 @@
       },
       "autostart": {
         "label": "التشغيل عند بدء التشغيل",
-        "description": ".بدء تشغيل HABLA تلقائياً عند تسجيل الدخول إلى جهاز الكمبيوتر الخاص بك"
+        "description": ".بدء تشغيل DILO تلقائياً عند تسجيل الدخول إلى جهاز الكمبيوتر الخاص بك"
       },
       "showTrayIcon": {
         "label": "إظهار أيقونة شريط النظام",
-        "description": ".عرض أيقونة HABLA في شريط النظام"
+        "description": ".عرض أيقونة DILO في شريط النظام"
       },
       "overlay": {
         "style": {
@@ -440,7 +440,7 @@
       },
       "updateChecks": {
         "label": "التحقق من وجود تحديثات",
-        "description": "التحقق تلقائياً من وجود إصدارات جديدة من HABLA"
+        "description": "التحقق تلقائياً من وجود إصدارات جديدة من DILO"
       },
       "soundTheme": {
         "label": "سمة الصوت",
@@ -519,11 +519,11 @@
       "title": "حول",
       "version": {
         "title": "الإصدار",
-        "description": "الإصدار الحالي من HABLA"
+        "description": "الإصدار الحالي من DILO"
       },
       "appDataDirectory": {
         "title": "مجلد بيانات التطبيق",
-        "description": "الموقع الذي يخزن فيه HABLA بياناته"
+        "description": "الموقع الذي يخزن فيه DILO بياناته"
       },
       "sourceCode": {
         "title": "كود المصدر",
@@ -532,7 +532,7 @@
       },
       "supportDevelopment": {
         "title": "دعم التطوير",
-        "description": "ساعدنا في مواصلة بناء HABLA",
+        "description": "ساعدنا في مواصلة بناء DILO",
         "button": "تبرع"
       },
       "acknowledgments": {
@@ -540,17 +540,17 @@
         "ggml": {
           "title": "ggml",
           "description": "استنتاج عالي الأداء لنموذج التعرف التلقائي على الكلام Whisper من OpenAI",
-          "details": ".يستخدم HABLA برنامج ggml لمعالجة سريعة ومحلية لتحويل الكلام إلى نص. شكراً للعمل الرائع الذي قام به Georgi Gerganov والمساهمون"
+          "details": ".يستخدم DILO برنامج ggml لمعالجة سريعة ومحلية لتحويل الكلام إلى نص. شكراً للعمل الرائع الذي قام به Georgi Gerganov والمساهمون"
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       },
       "whatsNewUpdates": {
         "label": "إظهار الجديد",
-        "description": "إظهار ملاحظات الإصدار بعد تحديثات HABLA"
+        "description": "إظهار ملاحظات الإصدار بعد تحديثات DILO"
       }
     },
     "modelSettings": {
@@ -571,7 +571,7 @@
       "searchPlaceholder": "ابحث عن النماذج بالاسم…",
       "rescan": {
         "label": "إعادة الفحص",
-        "tooltip": "إعادة الفحص بحثًا عن النماذج المضافة إلى مجلد النماذج أو ذاكرة Hugging Face التخزينية المؤقتة خارج HABLA"
+        "tooltip": "إعادة الفحص بحثًا عن النماذج المضافة إلى مجلد النماذج أو ذاكرة Hugging Face التخزينية المؤقتة خارج DILO"
       }
     }
   },
@@ -598,7 +598,7 @@
     "noOptionsFound": "لم يتم العثور على خيارات"
   },
   "accessibility": {
-    "permissionsDescription": ".يحتاج HABLA إلى أذونات إمكانية الوصول لكتابة النص المفرغ",
+    "permissionsDescription": ".يحتاج DILO إلى أذونات إمكانية الوصول لكتابة النص المفرغ",
     "openSettings": "فتح إعدادات النظام"
   },
   "errors": {
@@ -621,11 +621,11 @@
   },
   "appLanguage": {
     "title": "لغة التطبيق",
-    "description": "تغيير لغة واجهة HABLA"
+    "description": "تغيير لغة واجهة DILO"
   },
   "theme": {
     "title": "سمة التطبيق",
-    "description": "اختر ما إذا كان HABLA يتبع مظهر النظام أو يبقى فاتحًا أو داكنًا",
+    "description": "اختر ما إذا كان DILO يتبع مظهر النظام أو يبقى فاتحًا أو داكنًا",
     "options": {
       "system": "النظام",
       "light": "فاتح",
@@ -637,6 +637,6 @@
     "processing": "...جاري المعالجة"
   },
   "whatsNew": {
-    "title": "الجديد في HABLA v{{version}}"
+    "title": "الجديد في DILO v{{version}}"
   }
 }

@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "需要权限",
-      "description": "HABLA 需要一些权限才能正常工作。",
+      "description": "DILO 需要一些权限才能正常工作。",
       "microphone": {
         "title": "麦克风访问",
         "description": "需要听取您的语音进行转录。"
@@ -172,13 +172,13 @@
       "searchPlaceholder": "按名称搜索模型…",
       "rescan": {
         "label": "重新扫描",
-        "tooltip": "重新扫描在 HABLA 之外添加到模型文件夹或 Hugging Face 缓存中的模型"
+        "tooltip": "重新扫描在 DILO 之外添加到模型文件夹或 Hugging Face 缓存中的模型"
       }
     },
     "general": {
       "title": "通用",
       "shortcut": {
-        "title": "HABLA 快捷键",
+        "title": "DILO 快捷键",
         "description": "配置启动语音转文字录制的键盘快捷键",
         "loading": "加载快捷键中...",
         "none": "未配置快捷键",
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "开机启动",
-        "description": "登录计算机时自动启动 HABLA。"
+        "description": "登录计算机时自动启动 DILO。"
       },
       "showTrayIcon": {
         "label": "显示托盘图标",
-        "description": "在系统托盘中显示 HABLA 图标。"
+        "description": "在系统托盘中显示 DILO 图标。"
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "检查更新",
-        "description": "自动检查 HABLA 的新版本"
+        "description": "自动检查 DILO 的新版本"
       },
       "soundTheme": {
         "label": "声音主题",
@@ -540,11 +540,11 @@
       "title": "关于",
       "version": {
         "title": "版本",
-        "description": "HABLA 的当前版本"
+        "description": "DILO 的当前版本"
       },
       "appDataDirectory": {
         "title": "应用数据目录",
-        "description": "HABLA 存储数据的位置"
+        "description": "DILO 存储数据的位置"
       },
       "sourceCode": {
         "title": "源代码",
@@ -553,7 +553,7 @@
       },
       "supportDevelopment": {
         "title": "支持开发",
-        "description": "帮助我们继续开发 HABLA",
+        "description": "帮助我们继续开发 DILO",
         "button": "捐赠"
       },
       "acknowledgments": {
@@ -561,17 +561,17 @@
         "ggml": {
           "title": "ggml",
           "description": "OpenAI Whisper 自动语音识别模型的高性能推理",
-          "details": "HABLA 使用 ggml 进行快速的本地语音转文字处理。感谢 Georgi Gerganov 和贡献者们的出色工作。"
+          "details": "DILO 使用 ggml 进行快速的本地语音转文字处理。感谢 Georgi Gerganov 和贡献者们的出色工作。"
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       },
       "whatsNewUpdates": {
         "label": "显示新功能",
-        "description": "HABLA 更新后显示发行说明"
+        "description": "DILO 更新后显示发行说明"
       }
     }
   },
@@ -598,7 +598,7 @@
     "noOptionsFound": "未找到选项"
   },
   "accessibility": {
-    "permissionsDescription": "HABLA 需要辅助功能权限才能输入转录的文字。",
+    "permissionsDescription": "DILO 需要辅助功能权限才能输入转录的文字。",
     "openSettings": "打开系统设置"
   },
   "errors": {
@@ -621,11 +621,11 @@
   },
   "appLanguage": {
     "title": "应用语言",
-    "description": "更改 HABLA 界面的语言"
+    "description": "更改 DILO 界面的语言"
   },
   "theme": {
     "title": "应用主题",
-    "description": "选择 HABLA 跟随系统主题，还是保持浅色或深色",
+    "description": "选择 DILO 跟随系统主题，还是保持浅色或深色",
     "options": {
       "system": "跟随系统",
       "light": "浅色",
@@ -637,6 +637,6 @@
     "processing": "处理中..."
   },
   "whatsNew": {
-    "title": "HABLA v{{version}} 新功能"
+    "title": "DILO v{{version}} 新功能"
   }
 }

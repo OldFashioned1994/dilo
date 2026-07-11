@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "Permissions Required",
-      "description": "HABLA needs a couple of permissions to work properly.",
+      "description": "DILO needs a couple of permissions to work properly.",
       "microphone": {
         "title": "Microphone Access",
         "description": "Required to hear your voice for transcription."
@@ -160,7 +160,7 @@
     "general": {
       "title": "General",
       "shortcut": {
-        "title": "HABLA Shortcuts",
+        "title": "DILO Shortcuts",
         "description": "Configure keyboard shortcuts to trigger speech-to-text recording",
         "loading": "Loading shortcuts...",
         "none": "No shortcuts configured",
@@ -212,7 +212,7 @@
       },
       "rescan": {
         "label": "Rescan",
-        "tooltip": "Rescan for models added to the models folder or Hugging Face cache outside HABLA"
+        "tooltip": "Rescan for models added to the models folder or Hugging Face cache outside DILO"
       },
       "noModelsMatch": "No models match this filter."
     },
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "Launch on Startup",
-        "description": "Automatically start HABLA when you log in to your computer."
+        "description": "Automatically start DILO when you log in to your computer."
       },
       "showTrayIcon": {
         "label": "Show Tray Icon",
-        "description": "Display the HABLA icon in the system tray."
+        "description": "Display the DILO icon in the system tray."
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "Check for Updates",
-        "description": "Automatically check for new versions of HABLA"
+        "description": "Automatically check for new versions of DILO"
       },
       "whatsNewPreview": {
         "title": "Preview What's New",
@@ -540,15 +540,15 @@
       "title": "About",
       "version": {
         "title": "Version",
-        "description": "Current version of HABLA"
+        "description": "Current version of DILO"
       },
       "whatsNewUpdates": {
         "label": "Show What's New",
-        "description": "Show release notes after HABLA updates"
+        "description": "Show release notes after DILO updates"
       },
       "appDataDirectory": {
         "title": "App Data Directory",
-        "description": "Location where HABLA stores its data"
+        "description": "Location where DILO stores its data"
       },
       "sourceCode": {
         "title": "Source Code",
@@ -557,7 +557,7 @@
       },
       "supportDevelopment": {
         "title": "Support Development",
-        "description": "Support Handy, the original project HABLA is built on",
+        "description": "Support Handy, the original project DILO is built on",
         "button": "Donate"
       },
       "acknowledgments": {
@@ -565,12 +565,12 @@
         "ggml": {
           "title": "ggml",
           "description": "High-performance tensor library for on-device machine learning inference",
-          "details": "HABLA's local speech-to-text is built on transcribe.cpp and ggml. Thanks to the amazing work by Georgi Gerganov and contributors."
+          "details": "DILO's local speech-to-text is built on transcribe.cpp and ggml. Thanks to the amazing work by Georgi Gerganov and contributors."
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       }
     }
@@ -589,7 +589,7 @@
     "portableUpdateButton": "Open GitHub Releases"
   },
   "whatsNew": {
-    "title": "New in HABLA v{{version}}"
+    "title": "New in DILO v{{version}}"
   },
   "common": {
     "loading": "Loading...",
@@ -601,7 +601,7 @@
     "noOptionsFound": "No options found"
   },
   "accessibility": {
-    "permissionsDescription": "HABLA needs accessibility permissions to type transcribed text.",
+    "permissionsDescription": "DILO needs accessibility permissions to type transcribed text.",
     "openSettings": "Open System Settings"
   },
   "errors": {
@@ -624,11 +624,11 @@
   },
   "appLanguage": {
     "title": "Application Language",
-    "description": "Change the language of the HABLA interface"
+    "description": "Change the language of the DILO interface"
   },
   "theme": {
     "title": "Application Theme",
-    "description": "Choose whether HABLA follows your system theme or stays light or dark",
+    "description": "Choose whether DILO follows your system theme or stays light or dark",
     "options": {
       "system": "System",
       "light": "Light",

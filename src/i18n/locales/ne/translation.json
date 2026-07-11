@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "अनुमतिहरू आवश्यक छन्",
-      "description": "HABLA लाई राम्रोसँग काम गर्न केही अनुमतिहरू चाहिन्छ।",
+      "description": "DILO लाई राम्रोसँग काम गर्न केही अनुमतिहरू चाहिन्छ।",
       "microphone": {
         "title": "माइक्रोफोन पहुँच",
         "description": "ट्रान्सक्रिप्सनका लागि तपाईंको आवाज सुन्न आवश्यक छ।"
@@ -160,7 +160,7 @@
     "general": {
       "title": "सामान्य",
       "shortcut": {
-        "title": "HABLA सर्टकटहरू",
+        "title": "DILO सर्टकटहरू",
         "description": "स्पिच-टु-टेक्स्ट रेकर्डिङ सुरु गर्न किबोर्ड सर्टकटहरू सेट अप गर्नुहोस्",
         "loading": "सर्टकटहरू लोड गरिँदैछन्...",
         "none": "कुनै सर्टकट सेट गरिएको छैन",
@@ -212,7 +212,7 @@
       },
       "rescan": {
         "label": "फेरि स्क्यान गर्नुहोस्",
-        "tooltip": "HABLA बाहिरबाट मोडेल फोल्डर वा Hugging Face क्यासमा थपिएका मोडेलहरू फेरि स्क्यान गर्नुहोस्"
+        "tooltip": "DILO बाहिरबाट मोडेल फोल्डर वा Hugging Face क्यासमा थपिएका मोडेलहरू फेरि स्क्यान गर्नुहोस्"
       },
       "noModelsMatch": "यो फिल्टरसँग कुनै मोडेल मिल्दैन।"
     },
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "स्टार्टअपमा सुरु गर्नुहोस्",
-        "description": "कम्प्युटरमा लगइन गर्दा HABLA स्वतः सुरु गर्नुहोस्।"
+        "description": "कम्प्युटरमा लगइन गर्दा DILO स्वतः सुरु गर्नुहोस्।"
       },
       "showTrayIcon": {
         "label": "ट्रे आइकन देखाउनुहोस्",
-        "description": "सिस्टम ट्रेमा HABLA आइकन देखाउनुहोस्।"
+        "description": "सिस्टम ट्रेमा DILO आइकन देखाउनुहोस्।"
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "अपडेटहरू जाँच गर्नुहोस्",
-        "description": "HABLA को नयाँ संस्करण स्वतः जाँच गर्नुहोस्"
+        "description": "DILO को नयाँ संस्करण स्वतः जाँच गर्नुहोस्"
       },
       "whatsNewPreview": {
         "title": "नयाँ के छ पूर्वावलोकन",
@@ -540,15 +540,15 @@
       "title": "बारेमा",
       "version": {
         "title": "संस्करण",
-        "description": "HABLA को हालको संस्करण"
+        "description": "DILO को हालको संस्करण"
       },
       "whatsNewUpdates": {
         "label": "नयाँ के छ देखाउनुहोस्",
-        "description": "HABLA अपडेट भएपछि रिलिज नोटहरू देखाउनुहोस्"
+        "description": "DILO अपडेट भएपछि रिलिज नोटहरू देखाउनुहोस्"
       },
       "appDataDirectory": {
         "title": "एप डेटा डाइरेक्टरी",
-        "description": "HABLA ले आफ्नो डेटा भण्डारण गर्ने स्थान"
+        "description": "DILO ले आफ्नो डेटा भण्डारण गर्ने स्थान"
       },
       "sourceCode": {
         "title": "स्रोत कोड",
@@ -557,7 +557,7 @@
       },
       "supportDevelopment": {
         "title": "विकासलाई सहयोग गर्नुहोस्",
-        "description": "HABLA निर्माण जारी राख्न हामीलाई सहयोग गर्नुहोस्",
+        "description": "DILO निर्माण जारी राख्न हामीलाई सहयोग गर्नुहोस्",
         "button": "दान गर्नुहोस्"
       },
       "acknowledgments": {
@@ -565,12 +565,12 @@
         "ggml": {
           "title": "ggml",
           "description": "अन-डिभाइस मेसिन लर्निङ अनुमानका लागि उच्च-प्रदर्शन टेन्सर लाइब्रेरी",
-          "details": "HABLA को स्थानीय स्पिच-टु-टेक्स्ट transcribe.cpp र ggml मा आधारित छ। Georgi Gerganov र योगदानकर्ताहरूको उत्कृष्ट कामका लागि धन्यवाद।"
+          "details": "DILO को स्थानीय स्पिच-टु-टेक्स्ट transcribe.cpp र ggml मा आधारित छ। Georgi Gerganov र योगदानकर्ताहरूको उत्कृष्ट कामका लागि धन्यवाद।"
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       }
     }
@@ -589,7 +589,7 @@
     "portableUpdateButton": "GitHub Releases खोल्नुहोस्"
   },
   "whatsNew": {
-    "title": "HABLA v{{version}} मा नयाँ"
+    "title": "DILO v{{version}} मा नयाँ"
   },
   "common": {
     "loading": "लोड गरिँदैछ...",
@@ -601,7 +601,7 @@
     "noOptionsFound": "कुनै विकल्प भेटिएन"
   },
   "accessibility": {
-    "permissionsDescription": "ट्रान्सक्राइब गरिएको टेक्स्ट टाइप गर्न HABLA लाई एक्सेसिबिलिटी अनुमति चाहिन्छ।",
+    "permissionsDescription": "ट्रान्सक्राइब गरिएको टेक्स्ट टाइप गर्न DILO लाई एक्सेसिबिलिटी अनुमति चाहिन्छ।",
     "openSettings": "सिस्टम सेटिङहरू खोल्नुहोस्"
   },
   "errors": {
@@ -624,11 +624,11 @@
   },
   "appLanguage": {
     "title": "एपको भाषा",
-    "description": "HABLA इन्टरफेसको भाषा परिवर्तन गर्नुहोस्"
+    "description": "DILO इन्टरफेसको भाषा परिवर्तन गर्नुहोस्"
   },
   "theme": {
     "title": "अनुप्रयोगको थिम",
-    "description": "HABLA ले तपाईंको सिस्टम थिम अनुसरण गर्ने वा उज्यालो वा अँध्यारो रहने छान्नुहोस्",
+    "description": "DILO ले तपाईंको सिस्टम थिम अनुसरण गर्ने वा उज्यालो वा अँध्यारो रहने छान्नुहोस्",
     "options": {
       "system": "सिस्टम",
       "light": "उज्यालो",

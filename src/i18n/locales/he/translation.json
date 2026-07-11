@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "נדרשות הרשאות",
-      "description": "HABLA צריך כמה הרשאות כדי לעבוד כמו שצריך.",
+      "description": "DILO צריך כמה הרשאות כדי לעבוד כמו שצריך.",
       "microphone": {
         "title": "גישה למיקרופון",
         "description": "נדרש כדי לשמוע את הקול שלך לצורך תמלול."
@@ -160,7 +160,7 @@
     "general": {
       "title": "כללי",
       "shortcut": {
-        "title": "קיצורי מקשים של HABLA",
+        "title": "קיצורי מקשים של DILO",
         "description": "הגדר קיצורי מקשים כדי להפעיל הקלטה ותמלול דיבור",
         "loading": "טוען קיצורי מקשים...",
         "none": "לא הוגדרו קיצורי מקשים",
@@ -213,7 +213,7 @@
       "searchPlaceholder": "חיפוש מודלים לפי שם…",
       "rescan": {
         "label": "סריקה מחדש",
-        "tooltip": "סריקה מחדש לאיתור מודלים שנוספו לתיקיית המודלים או למטמון של Hugging Face מחוץ ל-HABLA"
+        "tooltip": "סריקה מחדש לאיתור מודלים שנוספו לתיקיית המודלים או למטמון של Hugging Face מחוץ ל-DILO"
       }
     },
     "sound": {
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "הפעל עם עליית המערכת",
-        "description": "הפעל את HABLA אוטומטית כשאתה מתחבר למחשב."
+        "description": "הפעל את DILO אוטומטית כשאתה מתחבר למחשב."
       },
       "showTrayIcon": {
         "label": "הצג אייקון במגש",
-        "description": "הצג את האייקון של HABLA במגש המערכת."
+        "description": "הצג את האייקון של DILO במגש המערכת."
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "בדוק עדכונים",
-        "description": "בדוק אוטומטית אם קיימות גרסאות חדשות של HABLA"
+        "description": "בדוק אוטומטית אם קיימות גרסאות חדשות של DILO"
       },
       "soundTheme": {
         "label": "ערכת צלילים",
@@ -540,11 +540,11 @@
       "title": "אודות",
       "version": {
         "title": "גרסה",
-        "description": "הגרסה הנוכחית של HABLA"
+        "description": "הגרסה הנוכחית של DILO"
       },
       "appDataDirectory": {
         "title": "תיקיית נתוני אפליקציה",
-        "description": "המיקום שבו HABLA שומר את הנתונים שלו"
+        "description": "המיקום שבו DILO שומר את הנתונים שלו"
       },
       "sourceCode": {
         "title": "קוד מקור",
@@ -553,7 +553,7 @@
       },
       "supportDevelopment": {
         "title": "תמיכה בפיתוח",
-        "description": "עזור לנו להמשיך לבנות את HABLA",
+        "description": "עזור לנו להמשיך לבנות את DILO",
         "button": "תרומה"
       },
       "acknowledgments": {
@@ -561,17 +561,17 @@
         "ggml": {
           "title": "ggml",
           "description": "הסקה מהירה לביצועים גבוהים עבור מודל זיהוי הדיבור Whisper של OpenAI",
-          "details": "HABLA משתמש ב-ggml לתמלול מהיר ומקומי. תודה לעבודה המדהימה של Georgi Gerganov וכל התורמים."
+          "details": "DILO משתמש ב-ggml לתמלול מהיר ומקומי. תודה לעבודה המדהימה של Georgi Gerganov וכל התורמים."
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       },
       "whatsNewUpdates": {
         "label": "הצג מה חדש",
-        "description": "הצג הערות גרסה לאחר עדכוני HABLA"
+        "description": "הצג הערות גרסה לאחר עדכוני DILO"
       }
     }
   },
@@ -598,7 +598,7 @@
     "noOptionsFound": "לא נמצאו אפשרויות"
   },
   "accessibility": {
-    "permissionsDescription": "HABLA צריך הרשאות נגישות כדי להקליד את הטקסט המתומלל.",
+    "permissionsDescription": "DILO צריך הרשאות נגישות כדי להקליד את הטקסט המתומלל.",
     "openSettings": "פתח את הגדרות המערכת"
   },
   "errors": {
@@ -621,11 +621,11 @@
   },
   "appLanguage": {
     "title": "שפת האפליקציה",
-    "description": "שנה את שפת הממשק של HABLA"
+    "description": "שנה את שפת הממשק של DILO"
   },
   "theme": {
     "title": "ערכת נושא של האפליקציה",
-    "description": "בחר אם HABLA יעקוב אחר ערכת הנושא של המערכת או יישאר בהיר או כהה",
+    "description": "בחר אם DILO יעקוב אחר ערכת הנושא של המערכת או יישאר בהיר או כהה",
     "options": {
       "system": "מערכת",
       "light": "בהיר",
@@ -637,6 +637,6 @@
     "processing": "מעבד..."
   },
   "whatsNew": {
-    "title": "חדש ב-HABLA v{{version}}"
+    "title": "חדש ב-DILO v{{version}}"
   }
 }

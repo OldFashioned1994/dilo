@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "Vyžadována oprávnění",
-      "description": "HABLA potřebuje několik oprávnění pro správné fungování.",
+      "description": "DILO potřebuje několik oprávnění pro správné fungování.",
       "microphone": {
         "title": "Přístup k mikrofonu",
         "description": "Potřebný pro zachycení vašeho hlasu k přepisu."
@@ -172,13 +172,13 @@
       "searchPlaceholder": "Hledat modely podle názvu…",
       "rescan": {
         "label": "Znovu prohledat",
-        "tooltip": "Znovu prohledat modely přidané do složky modelů nebo mezipaměti Hugging Face mimo HABLA"
+        "tooltip": "Znovu prohledat modely přidané do složky modelů nebo mezipaměti Hugging Face mimo DILO"
       }
     },
     "general": {
       "title": "Obecné",
       "shortcut": {
-        "title": "Zkratky HABLA",
+        "title": "Zkratky DILO",
         "description": "Nastavte klávesové zkratky pro spuštění nahrávání řeči na text",
         "loading": "Načítám zkratky...",
         "none": "Žádné zkratky nejsou nastavené",
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "Spouštět při startu",
-        "description": "Automaticky spustit HABLA po přihlášení do počítače."
+        "description": "Automaticky spustit DILO po přihlášení do počítače."
       },
       "showTrayIcon": {
         "label": "Zobrazit ikonu v systémové liště",
-        "description": "Zobrazit ikonu HABLA v systémové liště."
+        "description": "Zobrazit ikonu DILO v systémové liště."
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "Kontrolovat aktualizace",
-        "description": "Automaticky kontrolovat nové verze HABLA"
+        "description": "Automaticky kontrolovat nové verze DILO"
       },
       "soundTheme": {
         "label": "Zvukový motiv",
@@ -540,11 +540,11 @@
       "title": "O aplikaci",
       "version": {
         "title": "Verze",
-        "description": "Aktuální verze HABLA"
+        "description": "Aktuální verze DILO"
       },
       "appDataDirectory": {
         "title": "Adresář dat aplikace",
-        "description": "Umístění, kde HABLA ukládá data"
+        "description": "Umístění, kde DILO ukládá data"
       },
       "sourceCode": {
         "title": "Zdrojový kód",
@@ -553,7 +553,7 @@
       },
       "supportDevelopment": {
         "title": "Podpořte vývoj",
-        "description": "Pomozte nám pokračovat ve vývoji HABLA",
+        "description": "Pomozte nám pokračovat ve vývoji DILO",
         "button": "Přispět"
       },
       "acknowledgments": {
@@ -561,17 +561,17 @@
         "ggml": {
           "title": "ggml",
           "description": "Vysoce výkonné inferenční zpracování modelu automatického rozpoznávání řeči Whisper od OpenAI",
-          "details": "HABLA používá ggml pro rychlé lokální zpracování řeči na text. Díky skvělé práci Georgiho Gerganova a přispěvatelů."
+          "details": "DILO používá ggml pro rychlé lokální zpracování řeči na text. Díky skvělé práci Georgiho Gerganova a přispěvatelů."
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       },
       "whatsNewUpdates": {
         "label": "Zobrazovat novinky",
-        "description": "Zobrazovat poznámky k vydání po aktualizacích HABLA"
+        "description": "Zobrazovat poznámky k vydání po aktualizacích DILO"
       }
     }
   },
@@ -598,7 +598,7 @@
     "noOptionsFound": "Nenalezeny žádné možnosti"
   },
   "accessibility": {
-    "permissionsDescription": "HABLA potřebuje oprávnění usnadnění přístupu, aby mohlo psát přepsaný text.",
+    "permissionsDescription": "DILO potřebuje oprávnění usnadnění přístupu, aby mohlo psát přepsaný text.",
     "openSettings": "Otevřít Nastavení systému"
   },
   "errors": {
@@ -621,11 +621,11 @@
   },
   "appLanguage": {
     "title": "Jazyk aplikace",
-    "description": "Změňte jazyk rozhraní HABLA"
+    "description": "Změňte jazyk rozhraní DILO"
   },
   "theme": {
     "title": "Motiv aplikace",
-    "description": "Zvolte, zda má HABLA sledovat motiv systému, nebo zůstat světlý či tmavý",
+    "description": "Zvolte, zda má DILO sledovat motiv systému, nebo zůstat světlý či tmavý",
     "options": {
       "system": "Systém",
       "light": "Světlý",
@@ -637,6 +637,6 @@
     "processing": "Zpracovávám..."
   },
   "whatsNew": {
-    "title": "Novinky v HABLA v{{version}}"
+    "title": "Novinky v DILO v{{version}}"
   }
 }

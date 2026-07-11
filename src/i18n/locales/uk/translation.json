@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "Потрібні дозволи",
-      "description": "HABLA потребує деяких дозволів для коректної роботи.",
+      "description": "DILO потребує деяких дозволів для коректної роботи.",
       "microphone": {
         "title": "Доступ до мікрофона",
         "description": "Потрібен для прослуховування вашого голосу для транскрипції."
@@ -213,7 +213,7 @@
       "searchPlaceholder": "Пошук моделей за назвою…",
       "rescan": {
         "label": "Пересканувати",
-        "tooltip": "Пересканувати моделі, додані до папки моделей або кешу Hugging Face поза межами HABLA"
+        "tooltip": "Пересканувати моделі, додані до папки моделей або кешу Hugging Face поза межами DILO"
       }
     },
     "sound": {
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "Запуск при старті системи",
-        "description": "Автоматично запускати HABLA при вході в систему"
+        "description": "Автоматично запускати DILO при вході в систему"
       },
       "showTrayIcon": {
         "label": "Показати значок у треї",
-        "description": "Відображати значок HABLA у системному треї."
+        "description": "Відображати значок DILO у системному треї."
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "Перевірка оновлень",
-        "description": "Автоматично перевіряти наявність нових версій HABLA"
+        "description": "Автоматично перевіряти наявність нових версій DILO"
       },
       "soundTheme": {
         "label": "Звукова тема",
@@ -540,11 +540,11 @@
       "title": "Інфо",
       "version": {
         "title": "Версія",
-        "description": "Поточна версія HABLA"
+        "description": "Поточна версія DILO"
       },
       "appDataDirectory": {
         "title": "Папка даних програми",
-        "description": "Розташування даних HABLA"
+        "description": "Розташування даних DILO"
       },
       "sourceCode": {
         "title": "Вихідний код",
@@ -553,7 +553,7 @@
       },
       "supportDevelopment": {
         "title": "Підтримати розробку",
-        "description": "Допоможіть нам продовжувати розвивати HABLA",
+        "description": "Допоможіть нам продовжувати розвивати DILO",
         "button": "Підтримати"
       },
       "acknowledgments": {
@@ -561,17 +561,17 @@
         "ggml": {
           "title": "ggml",
           "description": "Високопродуктивний інференс моделі автоматичного розпізнавання мовлення Whisper від OpenAI",
-          "details": "HABLA використовує ggml для швидкої локальної обробки мовлення в текст. Дякуємо за чудову роботу Георгію Герганову та контриб'юторам."
+          "details": "DILO використовує ggml для швидкої локальної обробки мовлення в текст. Дякуємо за чудову роботу Георгію Герганову та контриб'юторам."
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       },
       "whatsNewUpdates": {
         "label": "Показувати новини",
-        "description": "Показувати примітки до випуску після оновлень HABLA"
+        "description": "Показувати примітки до випуску після оновлень DILO"
       }
     }
   },
@@ -598,7 +598,7 @@
     "noOptionsFound": "Опцій не знайдено"
   },
   "accessibility": {
-    "permissionsDescription": "HABLA потребує дозволи доступності для введення транскрибованого тексту.",
+    "permissionsDescription": "DILO потребує дозволи доступності для введення транскрибованого тексту.",
     "openSettings": "Відкрити Системні налаштування"
   },
   "errors": {
@@ -621,11 +621,11 @@
   },
   "appLanguage": {
     "title": "Мова інтерфейсу",
-    "description": "Змінити мову інтерфейсу HABLA"
+    "description": "Змінити мову інтерфейсу DILO"
   },
   "theme": {
     "title": "Тема застосунку",
-    "description": "Виберіть, чи має HABLA слідувати темі системи, чи залишатися світлою або темною",
+    "description": "Виберіть, чи має DILO слідувати темі системи, чи залишатися світлою або темною",
     "options": {
       "system": "Системна",
       "light": "Світла",
@@ -637,6 +637,6 @@
     "processing": "Постобробка..."
   },
   "whatsNew": {
-    "title": "Нове в HABLA v{{version}}"
+    "title": "Нове в DILO v{{version}}"
   }
 }

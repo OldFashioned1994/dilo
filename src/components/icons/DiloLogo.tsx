@@ -1,8 +1,8 @@
 import React from "react";
 
-/* Lockup de marca: isotipo «¡» + wordmark HABLA en Archivo 900.
+/* Lockup de marca: isotipo «¡» + wordmark DILO en Archivo 900.
    El texto usa la fuente cargada por la app (ver App.css). */
-const HablaLogo = ({
+const DiloLogo = ({
   width,
   height,
   className,
@@ -16,7 +16,7 @@ const HablaLogo = ({
       width={width}
       height={height}
       className={className}
-      viewBox="0 0 348 110"
+      viewBox="0 0 268 110"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -33,10 +33,10 @@ const HablaLogo = ({
         letterSpacing="-2"
         fill="var(--color-text)"
       >
-        HABLA
+        DILO
       </text>
     </svg>
   );
 };
 
-export default HablaLogo;
+export default DiloLogo;

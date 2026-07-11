@@ -1,7 +1,7 @@
-# Guía de lanzamiento de HABLA
+# Guía de lanzamiento de DILO
 
-Checklist para publicar el proyecto y compartir el link de descarga. Pensada para
-el repo canónico `habla-voz/habla` — si se usa otra cuenta/org, correr primero el
+Checklist para publicar el proyecto y compartir el link de descarga. Repo
+canónico: `OldFashioned1994/dilo` — si se usa otra cuenta/org, correr primero el
 paso 0.
 
 ## 0 · (Solo si cambia el dueño) Reapuntar el repo
@@ -9,18 +9,17 @@ paso 0.
 Los links al repo están centralizados en estos archivos; un solo reemplazo los cubre:
 
 ```bash
-grep -rl "habla-voz/habla" src src-tauri docs README.md DEPLOY.md | \
-  xargs sed -i 's|habla-voz/habla|TU-ORG/TU-REPO|g'
+grep -rl "OldFashioned1994/dilo" src src-tauri docs README.md DEPLOY.md | \
+  xargs sed -i 's|OldFashioned1994/dilo|TU-ORG/TU-REPO|g'
 ```
 
-## 1 · Crear la org y el repo
+## 1 · Crear el repo
 
-1. Crear la organización **habla-voz** en GitHub (verificado libre al 2026-07-11).
-2. Publicar:
+Requiere `gh` autenticado como **OldFashioned1994** (`gh auth login`):
 
 ```bash
-gh repo create habla-voz/habla --public --description "No lo tipees. Dilo. Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica." --homepage "https://habla-voz.github.io/habla/"
-git remote set-url origin https://github.com/habla-voz/habla.git
+gh repo create OldFashioned1994/dilo --public --description "No lo tipees. Dilo. Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica." --homepage "https://oldfashioned1994.github.io/dilo/"
+git remote set-url origin https://github.com/OldFashioned1994/dilo.git
 git push -u origin main
 ```
 
@@ -29,12 +28,12 @@ git push -u origin main
 La landing vive en `docs/`. En **Settings → Pages**: Source = *Deploy from a branch*,
 Branch = `main`, carpeta `/docs`. En ~1 minuto queda viva en:
 
-**https://habla-voz.github.io/habla/**
+**https://oldfashioned1994.github.io/dilo/**
 
 O por CLI:
 
 ```bash
-gh api repos/habla-voz/habla/pages -X POST -f "source[branch]=main" -f "source[path]=/docs"
+gh api repos/OldFashioned1994/dilo/pages -X POST -f "source[branch]=main" -f "source[path]=/docs"
 ```
 
 ## 3 · Compilar los instaladores (release v1.0.0)
@@ -61,14 +60,14 @@ Notas del estado actual (decisiones para poder lanzar hoy):
 
 ## 4 · Anunciar
 
-- Landing: https://habla-voz.github.io/habla/
-- Descarga directa: https://github.com/habla-voz/habla/releases/latest
+- Landing: https://oldfashioned1994.github.io/dilo/
+- Descarga directa: https://github.com/OldFashioned1994/dilo/releases/latest
 - Copy de lanzamiento listo en `marca/identidad-verbal.md` (sección "Ejemplos aplicados").
 
 ## Registro de decisiones
 
 - Fork de [cjpais/handy](https://github.com/cjpais/handy) (MIT). Su licencia exige
-  marca propia en forks: por eso HABLA tiene nombre, logo e íconos propios y el
+  marca propia en forks: por eso DILO tiene nombre, logo e íconos propios y el
   About de la app acredita al proyecto original.
 - Los modelos se descargan de `blob.handy.computer` (CDN del proyecto original),
   igual que en upstream. Si algún día conviene, se pueden espejar en un bucket propio.

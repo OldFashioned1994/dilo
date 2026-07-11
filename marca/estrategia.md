@@ -1,4 +1,4 @@
-# HABLA — Plataforma de marca
+# DILO — Plataforma de marca
 
 > Rebranding de [Handy](https://github.com/cjpais/handy) (MIT) como producto para
 > la comunidad dev de Latinoamérica. La licencia de Handy **exige** marca propia
@@ -40,15 +40,15 @@ escrito, para no perder el hilo de lo que estoy pensando."
 | Wispr Flow | USD 12/mes | inglés primero | nube |
 | superwhisper | USD 8.49/mes | inglés primero | local (solo macOS) |
 | Dictado del SO | gratis | regular en es | nube (Windows) |
-| **HABLA** | **gratis** | **español primero** | **100% local, 3 SO** |
+| **DILO** | **gratis** | **español primero** | **100% local, 3 SO** |
 
 **El hueco:** nadie le habla al dev latinoamericano en su idioma con una
-herramienta libre, local y multiplataforma. Ese hueco es exactamente HABLA.
+herramienta libre, local y multiplataforma. Ese hueco es exactamente DILO.
 
 ## Posicionamiento
 
 Para devs de Latinoamérica que programan con IA y viven entre Cursor, Claude y la
-terminal, **HABLA** es el dictado por voz **libre, gratis y 100% offline** que
+terminal, **DILO** es el dictado por voz **libre, gratis y 100% offline** que
 convierte lo que decís en texto dentro de cualquier app, porque corre Whisper y
 Parakeet **en tu propia máquina** — tu voz no sale de tu compu.
 
@@ -59,7 +59,7 @@ Gratis, en tu idioma, y sin que tu voz viaje a ningún servidor."
 
 ## Arquetipo
 
-- **Dominante: El Forajido (Outlaw).** HABLA existe contra algo: contra la
+- **Dominante: El Forajido (Outlaw).** DILO existe contra algo: contra la
   suscripción en dólares, contra el "English only", contra mandar tu voz a la nube.
   No es rebeldía estética, es la razón de ser del producto (fork libre de un
   ecosistema pago).
@@ -67,7 +67,7 @@ Gratis, en tu idioma, y sin que tu voz viaje a ningún servidor."
   solemnidad, sin corporativismo: una herramienta que te presta un amigo.
 
 *Por qué no Sabio/Creador:* sería el default de "dev tool con IA" y no rastrea a
-la estrategia. HABLA no vende conocimiento ni creatividad: vende libertad práctica.
+la estrategia. DILO no vende conocimiento ni creatividad: vende libertad práctica.
 
 ## Personalidad (rasgos)
 

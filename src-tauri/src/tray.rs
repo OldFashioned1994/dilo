@@ -161,9 +161,9 @@ pub fn tray_tooltip() -> String {
 
 fn version_label() -> String {
     if cfg!(debug_assertions) {
-        format!("HABLA v{} (Dev)", env!("CARGO_PKG_VERSION"))
+        format!("DILO v{} (Dev)", env!("CARGO_PKG_VERSION"))
     } else {
-        format!("HABLA v{}", env!("CARGO_PKG_VERSION"))
+        format!("DILO v{}", env!("CARGO_PKG_VERSION"))
     }
 }
 

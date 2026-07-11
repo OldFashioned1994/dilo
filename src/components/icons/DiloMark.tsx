@@ -1,5 +1,5 @@
-/* Isotipo «¡» de HABLA. Hereda color vía currentColor para usarse como ícono. */
-const HablaMark = ({
+/* Isotipo «¡» de DILO. Hereda color vía currentColor para usarse como ícono. */
+const DiloMark = ({
   width,
   height,
   className,
@@ -21,4 +21,4 @@ const HablaMark = ({
   </svg>
 );
 
-export default HablaMark;
+export default DiloMark;

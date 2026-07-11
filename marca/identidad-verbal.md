@@ -1,18 +1,23 @@
-# HABLA — Identidad verbal
+# DILO — Identidad verbal
 
 ## Naming
 
-**HABLA** (siempre en mayúsculas cuando es marca; "Habla" en prosa técnica).
+**DILO** (siempre en mayúsculas cuando es marca; "Dilo" en prosa).
 
-- Es un imperativo universal: en tuteo es "habla", en voseo solo cambia la tilde
-  ("hablá"). Funciona de México a Argentina sin traducción.
-- Es la instrucción de uso del producto: apretá la tecla y... hablá.
-- Es una consigna: "hablar" es tener voz. Cierra con la esencia (*tu voz es tuya*).
-- Disponibilidad: chequeada 2026-07-11 — sin colisión dominante en el nicho de
-  dictado/dev tools (palabra común; los competidores con marca fuerte se llaman
-  Wispr, superwhisper, Willow). Repo y Pages viven bajo el usuario de GitHub propio.
+- Es "decir" + "lo" en imperativo: la instrucción de uso del producto y, a la vez,
+  **el remate del tagline** — la marca ES el call to action. "No lo tipees. Dilo."
+  termina en el nombre: cada vez que se dice el tagline, se dice la marca.
+- Cuatro letras, tuteo neutro-LatAm, se escribe como se pronuncia. En voseo sería
+  "decilo": se usa como guiño en redes ("decilo, che"), nunca en UI.
+- Cierra con la esencia (*tu voz es tuya*): lo que tenés para decir, decilo — y
+  que quede escrito.
+- Disponibilidad: chequeada 2026-07-11 — existe "DiLo", una app menor de
+  pronunciación/traducción en Google Play (espacio distinto, sin marca fuerte);
+  sin colisión dominante en dictado/dev tools. Los competidores con marca fuerte
+  se llaman Wispr, superwhisper, Willow.
 
-Nombres técnicos: binario `habla`, identificador `com.habla.app`, repo `habla`.
+Nombres técnicos: binario `dilo`, identificador `com.dilo.app`, repo
+`OldFashioned1994/dilo`.
 
 ## Tagline
 
@@ -27,7 +32,7 @@ para Latinoamérica.*
 |---|---|---|
 | Cercano ↔ Formal | Cercano (85/15) | "Tu voz no sale de tu compu. Punto." |
 | Con humor ↔ Serio | Humor seco (60/40) | "Tu micrófono ya sabía español. Ahora tu compu también." |
-| Activista ↔ Neutro | Activista con datos (70/30) | "Las otras cobran USD 12 por mes por escuchar tu voz en un servidor ajeno. HABLA es gratis y no escucha nadie." |
+| Activista ↔ Neutro | Activista con datos (70/30) | "Las otras cobran USD 12 por mes por escuchar tu voz en un servidor ajeno. DILO es gratis y no escucha nadie." |
 | Técnico ↔ Simple | Simple por fuera, técnico al fondo | Titular simple; specs (Whisper, Parakeet, VAD) en la letra chica para el que quiere saber. |
 
 El mismo mensaje, mal y bien:
@@ -59,18 +64,18 @@ IA", "llevar al siguiente nivel", monetizar, "asistente inteligente", vosotros.
 
 ## Ejemplos aplicados
 
-**Titular de landing:** "No lo tipees. Dilo." + sub: "HABLA convierte tu voz en
+**Titular de landing:** "No lo tipees. Dilo." + sub: "DILO convierte tu voz en
 texto en cualquier app. Libre, gratis y 100% offline."
 
 **Post corto (X/redes):** "Cerré la suscripción de dictado en dólares. Apreto
 F9, hablo, y el prompt aparece en Cursor. Local, en español, gratis. Se llama
-HABLA y es open source →"
+DILO y es open source →"
 
 **Respuesta de la comunidad (issue/Discord):** "Buenas! Sí, es un bug conocido en
 Wayland — mientras lo arreglamos, este workaround te salva: …"
 
 ## Crédito obligatorio (y de buena fe)
 
-HABLA siempre reconoce su origen: "HABLA es un fork de Handy, de CJ Pais (MIT).
-Sin afiliación ni endorsement — la marca HABLA es propia." Robar sin dar crédito
+DILO siempre reconoce su origen: "DILO es un fork de Handy, de CJ Pais (MIT).
+Sin afiliación ni endorsement — la marca DILO es propia." Robar sin dar crédito
 sería exactamente lo contrario de lo que la marca predica.

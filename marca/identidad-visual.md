@@ -1,4 +1,4 @@
-# HABLA — Identidad visual
+# DILO — Identidad visual
 
 ## Concepto visual (4 palabras)
 
@@ -21,9 +21,9 @@ sentido es la marca entera en un glifo: *un micrófono que solo nosotros tenemos
 
 ## Wordmark
 
-**HABLA** compuesto en **Archivo Black**, mayúsculas, tracking apretado (-2%).
+**DILO** compuesto en **Archivo Black**, mayúsculas, tracking apretado (-2%).
 Junto al isotipo o solo. La «¡» puede reemplazar espacios en piezas gráficas:
-`¡HABLA!` solo en contextos festivos, nunca en UI.
+`¡DILO!` solo en contextos festivos, nunca en UI.
 
 ## Color
 

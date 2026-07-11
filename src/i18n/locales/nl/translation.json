@@ -15,7 +15,7 @@
     "postProcessing": "Naverwerking",
     "history": "Geschiedenis",
     "debug": "Probleemoplossing",
-    "about": "Over HABLA"
+    "about": "Over DILO"
   },
   "onboarding": {
     "subtitle": "Kies een transcriptiemodel om aan de slag te gaan",
@@ -100,7 +100,7 @@
     },
     "permissions": {
       "title": "Machtigingen vereist",
-      "description": "HABLA heeft een aantal machtigingen nodig om goed te kunnen werken.",
+      "description": "DILO heeft een aantal machtigingen nodig om goed te kunnen werken.",
       "microphone": {
         "title": "Microfoontoegang",
         "description": "Vereist om je stem op te nemen voor transcriptie."
@@ -212,7 +212,7 @@
       },
       "rescan": {
         "label": "Opnieuw scannen",
-        "tooltip": "Scannen naar modellen die buiten HABLA om zijn toegevoegd aan de modellenmap of Hugging Face-cache"
+        "tooltip": "Scannen naar modellen die buiten DILO om zijn toegevoegd aan de modellenmap of Hugging Face-cache"
       },
       "noModelsMatch": "Geen modellen voldoen aan dit filter."
     },
@@ -274,11 +274,11 @@
       },
       "autostart": {
         "label": "Starten bij opstarten",
-        "description": "HABLA automatisch starten zodra je inlogt op je computer."
+        "description": "DILO automatisch starten zodra je inlogt op je computer."
       },
       "showTrayIcon": {
         "label": "Pictogram in systeemvak tonen",
-        "description": "Toon het HABLA-pictogram in het systeemvak."
+        "description": "Toon het DILO-pictogram in het systeemvak."
       },
       "overlay": {
         "style": {
@@ -461,7 +461,7 @@
       },
       "updateChecks": {
         "label": "Controleren op updates",
-        "description": "Automatisch controleren op nieuwe versies van HABLA"
+        "description": "Automatisch controleren op nieuwe versies van DILO"
       },
       "whatsNewPreview": {
         "title": "Voorbeeld van release-notes",
@@ -537,18 +537,18 @@
       }
     },
     "about": {
-      "title": "Over HABLA",
+      "title": "Over DILO",
       "version": {
         "title": "Versie",
-        "description": "Huidige versie van HABLA"
+        "description": "Huidige versie van DILO"
       },
       "whatsNewUpdates": {
         "label": "Toon 'Wat is er nieuw'",
-        "description": "Release-notes tonen nadat HABLA is bijgewerkt"
+        "description": "Release-notes tonen nadat DILO is bijgewerkt"
       },
       "appDataDirectory": {
         "title": "App-datamap",
-        "description": "Locatie waar HABLA de gegevens opslaat"
+        "description": "Locatie waar DILO de gegevens opslaat"
       },
       "sourceCode": {
         "title": "Broncode",
@@ -557,7 +557,7 @@
       },
       "supportDevelopment": {
         "title": "Ontwikkeling ondersteunen",
-        "description": "Help ons om te blijven bouwen aan HABLA",
+        "description": "Help ons om te blijven bouwen aan DILO",
         "button": "Doneren"
       },
       "acknowledgments": {
@@ -565,12 +565,12 @@
         "ggml": {
           "title": "ggml",
           "description": "Krachtige tensorbibliotheek voor lokale AI-verwerking",
-          "details": "HABLA's lokale spraak-naar-tekst is gebouwd op transcribe.cpp en ggml. Met dank aan het geweldige werk van Georgi Gerganov en alle bijdragers."
+          "details": "DILO's lokale spraak-naar-tekst is gebouwd op transcribe.cpp en ggml. Met dank aan het geweldige werk van Georgi Gerganov en alle bijdragers."
         },
         "handy": {
           "title": "Handy",
-          "description": "The original project HABLA was born from",
-          "details": "HABLA is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The HABLA brand is our own and does not imply affiliation or endorsement."
+          "description": "The original project DILO was born from",
+          "details": "DILO is a fork of Handy, created by CJ Pais and its community (MIT license). Without that work this app would not exist. The DILO brand is our own and does not imply affiliation or endorsement."
         }
       }
     }
@@ -589,7 +589,7 @@
     "portableUpdateButton": "GitHub Releases openen"
   },
   "whatsNew": {
-    "title": "Nieuw in HABLA v{{version}}"
+    "title": "Nieuw in DILO v{{version}}"
   },
   "common": {
     "loading": "Laden...",
@@ -601,7 +601,7 @@
     "noOptionsFound": "Geen opties gevonden"
   },
   "accessibility": {
-    "permissionsDescription": "HABLA heeft toegankelijkheidsmachtigingen nodig om getranscribeerde tekst te kunnen typen.",
+    "permissionsDescription": "DILO heeft toegankelijkheidsmachtigingen nodig om getranscribeerde tekst te kunnen typen.",
     "openSettings": "Systeeminstellingen openen"
   },
   "errors": {
@@ -624,11 +624,11 @@
   },
   "appLanguage": {
     "title": "Interfacetaal",
-    "description": "Wijzig de taal van de HABLA-interface"
+    "description": "Wijzig de taal van de DILO-interface"
   },
   "theme": {
     "title": "App-thema",
-    "description": "Kies of HABLA het systeemthema volgt of licht of donker blijft",
+    "description": "Kies of DILO het systeemthema volgt of licht of donker blijft",
     "options": {
       "system": "Systeem",
       "light": "Licht",
