@@ -31,6 +31,17 @@ static MIGRATIONS: &[M] = &[
     M::up("ALTER TABLE transcription_history ADD COLUMN post_processed_text TEXT;"),
     M::up("ALTER TABLE transcription_history ADD COLUMN post_process_prompt TEXT;"),
     M::up("ALTER TABLE transcription_history ADD COLUMN post_process_requested BOOLEAN NOT NULL DEFAULT 0;"),
+    M::up(
+        "CREATE TABLE IF NOT EXISTS meetings (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            started_at INTEGER NOT NULL,
+            ended_at INTEGER,
+            transcript TEXT NOT NULL DEFAULT '',
+            minutes TEXT,
+            minutes_prompt TEXT
+        );",
+    ),
 ];
 
 #[derive(Clone, Debug, Serialize, Deserialize, Type)]
@@ -50,6 +61,18 @@ pub enum HistoryUpdatePayload {
     Deleted { id: i64 },
     #[serde(rename = "toggled")]
     Toggled { id: i64 },
+}
+
+/// A recorded meeting session (Modo Reunión): local transcript plus the
+/// LLM-generated minutes, if the user asked for them.
+#[derive(Clone, Debug, Serialize, Deserialize, Type)]
+pub struct MeetingEntry {
+    pub id: i64,
+    pub title: String,
+    pub started_at: i64,
+    pub ended_at: Option<i64>,
+    pub transcript: String,
+    pub minutes: Option<String>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, Type)]
@@ -212,6 +235,89 @@ impl HistoryManager {
 
     pub fn recordings_dir(&self) -> &std::path::Path {
         &self.recordings_dir
+    }
+
+    // ---- Meetings (Modo Reunión) ----
+
+    fn meeting_from_row(row: &rusqlite::Row) -> rusqlite::Result<MeetingEntry> {
+        Ok(MeetingEntry {
+            id: row.get("id")?,
+            title: row.get("title")?,
+            started_at: row.get("started_at")?,
+            ended_at: row.get("ended_at")?,
+            transcript: row.get("transcript")?,
+            minutes: row.get("minutes")?,
+        })
+    }
+
+    /// Create a meeting row when a session starts. Returns the new meeting id.
+    pub fn create_meeting(&self, title: String) -> Result<i64> {
+        let started_at = Utc::now().timestamp();
+        let conn = self.get_connection()?;
+        conn.execute(
+            "INSERT INTO meetings (title, started_at) VALUES (?1, ?2)",
+            params![&title, started_at],
+        )?;
+        Ok(conn.last_insert_rowid())
+    }
+
+    /// Store the final transcript when the session ends.
+    pub fn finish_meeting(&self, id: i64, transcript: String) -> Result<()> {
+        let ended_at = Utc::now().timestamp();
+        let conn = self.get_connection()?;
+        conn.execute(
+            "UPDATE meetings SET ended_at = ?1, transcript = ?2 WHERE id = ?3",
+            params![ended_at, &transcript, id],
+        )?;
+        Ok(())
+    }
+
+    pub fn set_meeting_minutes(&self, id: i64, minutes: String, prompt: String) -> Result<()> {
+        let conn = self.get_connection()?;
+        conn.execute(
+            "UPDATE meetings SET minutes = ?1, minutes_prompt = ?2 WHERE id = ?3",
+            params![&minutes, &prompt, id],
+        )?;
+        Ok(())
+    }
+
+    pub fn rename_meeting(&self, id: i64, title: String) -> Result<()> {
+        let conn = self.get_connection()?;
+        conn.execute(
+            "UPDATE meetings SET title = ?1 WHERE id = ?2",
+            params![&title, id],
+        )?;
+        Ok(())
+    }
+
+    pub fn delete_meeting(&self, id: i64) -> Result<()> {
+        let conn = self.get_connection()?;
+        conn.execute("DELETE FROM meetings WHERE id = ?1", params![id])?;
+        Ok(())
+    }
+
+    pub fn get_meeting(&self, id: i64) -> Result<MeetingEntry> {
+        let conn = self.get_connection()?;
+        conn.query_row(
+            "SELECT id, title, started_at, ended_at, transcript, minutes FROM meetings WHERE id = ?1",
+            params![id],
+            Self::meeting_from_row,
+        )
+        .map_err(|e| anyhow!("Meeting {} not found: {}", id, e))
+    }
+
+    pub fn list_meetings(&self) -> Result<Vec<MeetingEntry>> {
+        let conn = self.get_connection()?;
+        let mut stmt = conn.prepare(
+            "SELECT id, title, started_at, ended_at, transcript, minutes FROM meetings
+             ORDER BY started_at DESC",
+        )?;
+        let rows = stmt.query_map([], Self::meeting_from_row)?;
+        let mut entries = Vec::new();
+        for row in rows {
+            entries.push(row?);
+        }
+        Ok(entries)
     }
 
     /// Save a new history entry to the database.

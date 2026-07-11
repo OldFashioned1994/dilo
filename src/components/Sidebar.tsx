@@ -1,6 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Cog, FlaskConical, History, Info, Sparkles, Cpu } from "lucide-react";
+import {
+  Cog,
+  FlaskConical,
+  History,
+  Info,
+  NotebookPen,
+  Sparkles,
+  Cpu,
+} from "lucide-react";
 import DiloLogo from "./icons/DiloLogo";
 import DiloMark from "./icons/DiloMark";
 import { useSettings } from "../hooks/useSettings";
@@ -10,6 +18,7 @@ import {
   HistorySettings,
   DebugSettings,
   AboutSettings,
+  MeetingsSettings,
   PostProcessingSettings,
   ModelsSettings,
 } from "./settings";
@@ -42,6 +51,12 @@ export const SECTIONS_CONFIG = {
     labelKey: "sidebar.models",
     icon: Cpu,
     component: ModelsSettings,
+    enabled: () => true,
+  },
+  meetings: {
+    labelKey: "sidebar.meetings",
+    icon: NotebookPen,
+    component: MeetingsSettings,
     enabled: () => true,
   },
   advanced: {

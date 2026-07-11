@@ -15,7 +15,8 @@
     "postProcessing": "後処理",
     "history": "履歴",
     "debug": "デバッグ",
-    "about": "概要"
+    "about": "概要",
+    "meetings": "Meetings"
   },
   "onboarding": {
     "subtitle": "開始するには、文字起こしのモデルを選択してください",
@@ -638,5 +639,50 @@
   },
   "whatsNew": {
     "title": "DILO v{{version}} の新機能"
+  },
+  "meetings": {
+    "title": "Meetings",
+    "subtitle": "Record the meeting, transcribe it on your computer, and generate the minutes.",
+    "start": "Start meeting",
+    "stop": "Finish & transcribe",
+    "cancel": "Discard",
+    "cancelConfirm": "Sure? Everything is lost",
+    "recording": "Recording meeting",
+    "finishing": "Transcribing the last minutes…",
+    "segments_one": "{{count}} block transcribed",
+    "segments_other": "{{count}} blocks transcribed",
+    "empty": "No meetings yet. Start one and DILO takes care of the rest.",
+    "generateMinutes": "Generate minutes",
+    "regenerateMinutes": "Regenerate minutes",
+    "generating": "Generating minutes…",
+    "minutesReady": "Minutes ready",
+    "copied": "Copied to clipboard",
+    "copyTranscript": "Copy transcript",
+    "copyMinutes": "Copy minutes",
+    "export": "Export .md",
+    "exported": "File exported",
+    "deleted": "Meeting deleted",
+    "transcript": "Transcript",
+    "minutes": "Minutes",
+    "noMinutes": "This meeting has no minutes yet.",
+    "needsProvider": "Minutes are generated with the LLM provider configured in Post-processing (an API or a local model).",
+    "privacyNote": "Transcription is 100% local: audio never leaves your computer.",
+    "micNote": "While recording a meeting, shortcut dictation is paused.",
+    "defaultTitle": "Meeting",
+    "hasMinutes": "with minutes",
+    "discarded": "Meeting discarded",
+    "saved": "Meeting transcribed and saved",
+    "emptyTranscript": "(no speech detected in audio)",
+    "errors": {
+      "meeting_already_active": "A meeting is already in progress",
+      "recording_busy": "The microphone is busy with a dictation",
+      "no_active_meeting": "There is no meeting in progress",
+      "empty_transcript": "The transcript is empty",
+      "no_provider": "Configure an LLM provider in Post-processing to generate minutes",
+      "no_model": "Choose an LLM model in Post-processing",
+      "empty_response": "The model returned no content; try again",
+      "meeting_active": "Cannot delete a meeting in progress",
+      "unknown": "Something failed; check the logs"
+    }
   }
 }

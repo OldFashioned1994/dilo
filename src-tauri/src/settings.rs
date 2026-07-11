@@ -423,6 +423,8 @@ pub struct AppSettings {
     pub post_process_prompts: Vec<LLMPrompt>,
     #[serde(default)]
     pub post_process_selected_prompt_id: Option<String>,
+    #[serde(default = "default_meeting_minutes_prompt")]
+    pub meeting_minutes_prompt: String,
     #[serde(default)]
     pub mute_while_recording: bool,
     #[serde(default)]
@@ -577,6 +579,13 @@ fn default_theme() -> Theme {
 
 fn default_post_process_enabled() -> bool {
     false
+}
+
+/// Default prompt template for meeting minutes (Modo Reunión). Written in
+/// Spanish because DILO speaks Spanish first; it instructs the LLM to answer
+/// in the transcript's language.
+fn default_meeting_minutes_prompt() -> String {
+    "Sos un asistente que redacta minutas de reunión. A partir de la transcripción de una reunión (puede contener errores de reconocimiento de voz), redactá una minuta clara en Markdown, en el mismo idioma de la transcripción, con estas secciones: ## Resumen (2 a 4 líneas) · ## Temas tratados (viñetas) · ## Decisiones (viñetas; si no hubo, escribí «Sin decisiones registradas») · ## Acciones (tabla con columnas Acción | Responsable | Fecha; inferí el responsable solo si se menciona) · ## Pendientes. No inventes información que no esté en la transcripción.".to_string()
 }
 
 fn default_app_language() -> String {
