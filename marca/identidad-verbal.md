@@ -28,8 +28,8 @@ para Latinoamérica._
 
 ## Tono de voz
 
-| Dimensión          | Posición                           | Ejemplo                                                                                                        |
-| ------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Dimensión           | Posición                           | Ejemplo                                                                                                        |
+| ------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Cercano ↔ Formal   | Cercano (85/15)                    | "Tu voz no sale de tu compu. Punto."                                                                           |
 | Con humor ↔ Serio  | Humor seco (60/40)                 | "Tu micrófono ya sabía español. Ahora tu compu también."                                                       |
 | Activista ↔ Neutro | Activista con datos (70/30)        | "Las otras cobran USD 12 por mes por escuchar tu voz en un servidor ajeno. DILO es gratis y no escucha nadie." |
