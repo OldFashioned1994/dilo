@@ -9,6 +9,7 @@
 **Tu voz es tuya.**
 
 Tres lecturas, las tres ciertas:
+
 1. Literal: el audio nunca sale de tu compu (100% offline).
 2. Idiomática: hablás en tu español, con tu acento, y funciona.
 3. Política: el software libre te devuelve el control. Nadie te alquila tu propia voz.
@@ -24,7 +25,7 @@ y en la nube. La voz es la interfaz más natural que existe — y tiene que ser 
 Cursor, Claude Code, la terminal. De Buenos Aires a CDMX. Cobran en moneda local,
 piensan dos veces antes de pagar otra suscripción en dólares.
 
-**Insight:** el que programa con IA ya no escribe código, escribe *párrafos*.
+**Insight:** el que programa con IA ya no escribe código, escribe _párrafos_.
 Prompts largos, contexto, instrucciones. Hablar es 3–4 veces más rápido que tipear,
 pero las herramientas buenas de dictado (Wispr Flow, superwhisper) son pagas, piensan
 en inglés y mandan tu voz a un servidor ajeno. El dev latino queda afuera tres veces:
@@ -35,12 +36,12 @@ escrito, para no perder el hilo de lo que estoy pensando."
 
 ## Categoría y hueco
 
-| Competidor | Precio | Idioma | Privacidad |
-|---|---|---|---|
-| Wispr Flow | USD 12/mes | inglés primero | nube |
-| superwhisper | USD 8.49/mes | inglés primero | local (solo macOS) |
-| Dictado del SO | gratis | regular en es | nube (Windows) |
-| **DILO** | **gratis** | **español primero** | **100% local, 3 SO** |
+| Competidor     | Precio       | Idioma              | Privacidad           |
+| -------------- | ------------ | ------------------- | -------------------- |
+| Wispr Flow     | USD 12/mes   | inglés primero      | nube                 |
+| superwhisper   | USD 8.49/mes | inglés primero      | local (solo macOS)   |
+| Dictado del SO | gratis       | regular en es       | nube (Windows)       |
+| **DILO**       | **gratis**   | **español primero** | **100% local, 3 SO** |
 
 **El hueco:** nadie le habla al dev latinoamericano en su idioma con una
 herramienta libre, local y multiplataforma. Ese hueco es exactamente DILO.
@@ -66,7 +67,7 @@ Gratis, en tu idioma, y sin que tu voz viaje a ningún servidor."
 - **Secundario: El Común (Everyman).** Es de acá y habla como nosotros. Sin
   solemnidad, sin corporativismo: una herramienta que te presta un amigo.
 
-*Por qué no Sabio/Creador:* sería el default de "dev tool con IA" y no rastrea a
+_Por qué no Sabio/Creador:_ sería el default de "dev tool con IA" y no rastrea a
 la estrategia. DILO no vende conocimiento ni creatividad: vende libertad práctica.
 
 ## Personalidad (rasgos)

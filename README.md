@@ -72,19 +72,19 @@ Si tu red bloquea la descarga automática, bajá los modelos a mano y ponelos en
 
 **Whisper (archivos `.bin`, van directo en `models/`):**
 
-| Modelo | Tamaño | URL |
-|---|---|---|
-| Small | 487 MB | `https://blob.handy.computer/ggml-small.bin` |
-| Medium | 492 MB | `https://blob.handy.computer/whisper-medium-q4_1.bin` |
-| Turbo | 1600 MB | `https://blob.handy.computer/ggml-large-v3-turbo.bin` |
-| Large | 1100 MB | `https://blob.handy.computer/ggml-large-v3-q5_0.bin` |
+| Modelo | Tamaño  | URL                                                   |
+| ------ | ------- | ----------------------------------------------------- |
+| Small  | 487 MB  | `https://blob.handy.computer/ggml-small.bin`          |
+| Medium | 492 MB  | `https://blob.handy.computer/whisper-medium-q4_1.bin` |
+| Turbo  | 1600 MB | `https://blob.handy.computer/ggml-large-v3-turbo.bin` |
+| Large  | 1100 MB | `https://blob.handy.computer/ggml-large-v3-q5_0.bin`  |
 
 **Parakeet (archivos `.tar.gz`, se descomprimen y la carpeta va en `models/` con su nombre exacto):**
 
-| Modelo | Carpeta requerida | URL |
-|---|---|---|
-| V2 | `parakeet-tdt-0.6b-v2-int8` | `https://blob.handy.computer/parakeet-v2-int8.tar.gz` |
-| V3 | `parakeet-tdt-0.6b-v3-int8` | `https://blob.handy.computer/parakeet-v3-int8.tar.gz` |
+| Modelo | Carpeta requerida           | URL                                                   |
+| ------ | --------------------------- | ----------------------------------------------------- |
+| V2     | `parakeet-tdt-0.6b-v2-int8` | `https://blob.handy.computer/parakeet-v2-int8.tar.gz` |
+| V3     | `parakeet-tdt-0.6b-v3-int8` | `https://blob.handy.computer/parakeet-v3-int8.tar.gz` |
 
 También se auto-descubren modelos Whisper GGML personalizados (`.bin` de Hugging Face) puestos en esa misma carpeta. Reiniciá DILO después de copiarlos.
 

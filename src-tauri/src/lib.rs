@@ -180,6 +180,7 @@ fn initialize_core_logic(app_handle: &AppHandle) {
     app_handle.manage(model_manager.clone());
     app_handle.manage(transcription_manager.clone());
     app_handle.manage(history_manager.clone());
+    app_handle.manage(Arc::new(managers::meeting::MeetingManager::new(app_handle)));
     app_handle.manage(tray::CurrentTrayIconState::new());
 
     // Note: Shortcuts are NOT initialized here.
@@ -639,6 +640,16 @@ pub fn run(cli_args: CliArgs) {
             commands::history::retry_history_entry_transcription,
             commands::history::update_history_limit,
             commands::history::update_recording_retention_period,
+            commands::meeting::start_meeting,
+            commands::meeting::stop_meeting,
+            commands::meeting::cancel_meeting,
+            commands::meeting::get_meeting_status,
+            commands::meeting::list_meetings,
+            commands::meeting::get_meeting,
+            commands::meeting::generate_meeting_minutes,
+            commands::meeting::delete_meeting,
+            commands::meeting::rename_meeting,
+            commands::meeting::update_meeting_minutes_prompt,
             helpers::clamshell::is_laptop,
         ])
         .events(collect_events![

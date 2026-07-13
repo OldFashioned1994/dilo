@@ -15,7 +15,8 @@
     "postProcessing": "Post Proceso",
     "history": "Historial",
     "debug": "Depuración",
-    "about": "Acerca de"
+    "about": "Acerca de",
+    "meetings": "Reuniones"
   },
   "onboarding": {
     "subtitle": "Para comenzar, elige un modelo de transcripción",
@@ -638,5 +639,50 @@
   },
   "whatsNew": {
     "title": "Nuevo en DILO v{{version}}"
+  },
+  "meetings": {
+    "title": "Reuniones",
+    "subtitle": "Grabá la reunión, transcribila en tu compu y generá la minuta.",
+    "start": "Iniciar reunión",
+    "stop": "Terminar y transcribir",
+    "cancel": "Descartar",
+    "cancelConfirm": "¿Seguro? Se pierde todo",
+    "recording": "Grabando reunión",
+    "finishing": "Transcribiendo los últimos minutos…",
+    "segments_one": "{{count}} bloque transcripto",
+    "segments_other": "{{count}} bloques transcriptos",
+    "empty": "Todavía no hay reuniones. Iniciá una y DILO se encarga del resto.",
+    "generateMinutes": "Generar minuta",
+    "regenerateMinutes": "Regenerar minuta",
+    "generating": "Generando minuta…",
+    "minutesReady": "Minuta lista",
+    "copied": "Copiado al portapapeles",
+    "copyTranscript": "Copiar transcripción",
+    "copyMinutes": "Copiar minuta",
+    "export": "Exportar .md",
+    "exported": "Archivo exportado",
+    "deleted": "Reunión eliminada",
+    "transcript": "Transcripción",
+    "minutes": "Minuta",
+    "noMinutes": "Esta reunión todavía no tiene minuta.",
+    "needsProvider": "La minuta se genera con el proveedor LLM configurado en Post-procesado (puede ser una API o un modelo local).",
+    "privacyNote": "La transcripción es 100% local: el audio no sale de tu compu.",
+    "micNote": "Mientras grabás una reunión, el dictado por atajo queda pausado.",
+    "defaultTitle": "Reunión",
+    "hasMinutes": "con minuta",
+    "discarded": "Reunión descartada",
+    "saved": "Reunión transcripta y guardada",
+    "emptyTranscript": "(sin audio con voz detectada)",
+    "errors": {
+      "meeting_already_active": "Ya hay una reunión en curso",
+      "recording_busy": "El micrófono está ocupado por un dictado",
+      "no_active_meeting": "No hay ninguna reunión en curso",
+      "empty_transcript": "La transcripción está vacía",
+      "no_provider": "Configurá un proveedor LLM en Post-procesado para generar minutas",
+      "no_model": "Elegí un modelo LLM en Post-procesado",
+      "empty_response": "El modelo no devolvió contenido; probá de nuevo",
+      "meeting_active": "No se puede borrar una reunión en curso",
+      "unknown": "Algo falló; revisá los logs"
+    }
   }
 }
