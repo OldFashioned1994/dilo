@@ -1,315 +1,1383 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DILO — No lo tipees. Dilo.</title>
-<meta name="description" content="Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica. Tu voz se convierte en texto en cualquier app — Cursor, Claude Code, la terminal. Tu voz no sale de tu compu.">
-<meta property="og:title" content="DILO — No lo tipees. Dilo.">
-<meta property="og:description" content="Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://oldfashioned1994.github.io/dilo/">
-<meta property="og:image" content="https://oldfashioned1994.github.io/dilo/og.png">
-<meta name="theme-color" content="#171310">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%23171310'/%3E%3Cg fill='%23FFB300'%3E%3Ccircle cx='256' cy='150' r='74'/%3E%3Crect x='216' y='268' width='80' height='164' rx='40'/%3E%3C/g%3E%3C/svg%3E">
-<style>
-/* ============ DILO — landing. Autocontenida: sin CDN, sin trackers. ============ */
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/archivo.woff2) format('woff2')}
-@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/archivo-black.woff2) format('woff2')}
-@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url(fonts/jetbrains-mono.woff2) format('woff2')}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DILO — No lo tipees. Dilo.</title>
+    <meta
+      name="description"
+      content="Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica. Tu voz se convierte en texto en cualquier app — Cursor, Claude Code, la terminal. Tu voz no sale de tu compu."
+    />
+    <meta property="og:title" content="DILO — No lo tipees. Dilo." />
+    <meta
+      property="og:description"
+      content="Dictado por voz libre, gratis y 100% offline, hecho para Latinoamérica."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oldfashioned1994.github.io/dilo/" />
+    <meta property="og:image" content="https://oldfashioned1994.github.io/dilo/og.png" />
+    <meta name="theme-color" content="#171310" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%23171310'/%3E%3Cg fill='%23FFB300'%3E%3Ccircle cx='256' cy='150' r='74'/%3E%3Crect x='216' y='268' width='80' height='164' rx='40'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <style>
+      /* ============ DILO — landing. Autocontenida: sin CDN, sin trackers. ============ */
+      @font-face {
+        font-family: "Archivo";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(fonts/archivo.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: "Archivo Black";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(fonts/archivo-black.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: swap;
+        src: url(fonts/jetbrains-mono.woff2) format("woff2");
+      }
 
-:root{
-  --carbon:#171310; --surface:#201a15; --surface2:#262019; --borde:#2e261e;
-  --hueso:#f4ede3; --arena:#b9a88f; --ambar:#ffb300; --rec:#e5482f;
-  --display:'Archivo Black','Arial Black',sans-serif;
-  --body:'Archivo',system-ui,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,'Cascadia Code',Consolas,monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--carbon);color:var(--hueso);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--ambar);color:var(--carbon)}
-a{color:var(--ambar);text-decoration:none}
-a:hover{text-decoration:underline;text-underline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-kbd{font-family:var(--mono);font-size:.82em;background:var(--surface2);border:1px solid var(--borde);border-bottom-width:3px;border-radius:6px;padding:2px 8px;white-space:nowrap}
+      :root {
+        --carbon: #171310;
+        --surface: #201a15;
+        --surface2: #262019;
+        --borde: #2e261e;
+        --hueso: #f4ede3;
+        --arena: #b9a88f;
+        --ambar: #ffb300;
+        --rec: #e5482f;
+        --display: "Archivo Black", "Arial Black", sans-serif;
+        --body: "Archivo", system-ui, sans-serif;
+        --mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--carbon);
+        color: var(--hueso);
+        font-family: var(--body);
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--ambar);
+        color: var(--carbon);
+      }
+      a {
+        color: var(--ambar);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      kbd {
+        font-family: var(--mono);
+        font-size: 0.82em;
+        background: var(--surface2);
+        border: 1px solid var(--borde);
+        border-bottom-width: 3px;
+        border-radius: 6px;
+        padding: 2px 8px;
+        white-space: nowrap;
+      }
 
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--carbon) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--borde)}
-nav .wrap{display:flex;align-items:center;gap:14px;height:64px}
-.logo{display:flex;align-items:center;gap:10px;color:var(--hueso)}
-.logo:hover{text-decoration:none}
-.logo b{font-family:var(--display);font-weight:400;font-size:1.25rem;letter-spacing:-.02em}
-.navlinks{margin-left:auto;display:flex;align-items:center;gap:22px;font-weight:600;font-size:.95rem}
-.navlinks a{color:var(--arena)}
-.navlinks a:hover{color:var(--hueso);text-decoration:none}
-@media(max-width:600px){.navlinks a:not(.btn):not(.gh){display:none}}
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;border-radius:12px;padding:14px 26px;transition:transform .12s ease,box-shadow .12s ease}
-.btn:hover{text-decoration:none;transform:translateY(-2px)}
-.btn-ambar{background:var(--ambar);color:var(--carbon)!important;box-shadow:0 6px 0 #8a5800}
-.btn-ambar:hover{box-shadow:0 8px 0 #8a5800}
-.btn-ambar:active{transform:translateY(2px);box-shadow:0 2px 0 #8a5800}
-.btn-borde{border:2px solid var(--borde);color:var(--hueso)!important}
-.btn-borde:hover{border-color:var(--arena)}
-nav .btn{padding:9px 18px;font-size:.92rem;box-shadow:0 4px 0 #8a5800}
+      /* ---------- nav ---------- */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--carbon) 88%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--borde);
+      }
+      nav .wrap {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        height: 64px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--hueso);
+      }
+      .logo:hover {
+        text-decoration: none;
+      }
+      .logo b {
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+      .navlinks {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .navlinks a {
+        color: var(--arena);
+      }
+      .navlinks a:hover {
+        color: var(--hueso);
+        text-decoration: none;
+      }
+      @media (max-width: 640px) {
+        .navlinks a:not(.btn):not(.gh) {
+          display: none;
+        }
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        border-radius: 12px;
+        padding: 14px 26px;
+        transition:
+          transform 0.12s ease,
+          box-shadow 0.12s ease;
+      }
+      .btn:hover {
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      .btn-ambar {
+        background: var(--ambar);
+        color: var(--carbon) !important;
+        box-shadow: 0 6px 0 #8a5800;
+      }
+      .btn-ambar:hover {
+        box-shadow: 0 8px 0 #8a5800;
+      }
+      .btn-ambar:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 0 #8a5800;
+      }
+      .btn-borde {
+        border: 2px solid var(--borde);
+        color: var(--hueso) !important;
+      }
+      .btn-borde:hover {
+        border-color: var(--arena);
+      }
+      nav .btn {
+        padding: 9px 18px;
+        font-size: 0.92rem;
+        box-shadow: 0 4px 0 #8a5800;
+      }
 
-/* ---------- hero ---------- */
-.hero{padding:96px 0 72px;position:relative}
-.hero h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(3.2rem,10.5vw,8.2rem);line-height:.92;letter-spacing:-.015em}
-.hero h1 .dilo{color:var(--ambar)}
-.hero .sub{max-width:640px;margin:32px 0 40px;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--arena)}
-.hero .sub strong{color:var(--hueso)}
-.cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.cta-note{font-family:var(--mono);font-size:.8rem;color:var(--arena);margin-top:14px}
-.cta-note a{color:var(--arena);text-decoration:underline;text-underline-offset:3px}
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative;
+        padding: 84px 0 64px;
+        overflow: hidden;
+      }
+      #lluvia {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        mask-image: linear-gradient(#000 55%, transparent 96%);
+        -webkit-mask-image: linear-gradient(#000 55%, transparent 96%);
+      }
+      .hero-glow {
+        position: absolute;
+        top: -220px;
+        right: -160px;
+        width: 640px;
+        height: 640px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 179, 0, 0.14) 0%, transparent 65%);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 40px;
+        align-items: center;
+      }
+      @media (max-width: 880px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .hero h1 {
+        font-family: var(--display);
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: clamp(3.4rem, 9.5vw, 7.6rem);
+        line-height: 0.9;
+        letter-spacing: -0.015em;
+      }
+      .hero h1 .dilo {
+        color: var(--ambar);
+      }
+      .hero .sub {
+        max-width: 560px;
+        margin: 30px 0 36px;
+        font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+        color: var(--arena);
+      }
+      .hero .sub strong {
+        color: var(--hueso);
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+      }
+      .cta-note {
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        color: var(--arena);
+        margin-top: 14px;
+      }
+      .cta-note a {
+        color: var(--arena);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
 
-/* ---------- terminal demo ---------- */
-.term{margin:72px auto 0;background:var(--surface);border:1px solid var(--borde);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
-.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--borde);font-family:var(--mono);font-size:.78rem;color:var(--arena)}
-.term-bar i{width:11px;height:11px;border-radius:50%;background:var(--borde);display:inline-block}
-.term-bar i:first-child{background:var(--rec)}
-.term-bar span{margin-left:8px}
-.term-body{padding:26px 26px 32px;font-family:var(--mono);font-size:clamp(.82rem,1.5vw,.98rem);line-height:1.9}
-.t-dim{color:var(--arena);opacity:.75}
-.t-amb{color:var(--ambar)}
-.t-ok{color:#7fb069}
-.t-rec{color:var(--rec);font-weight:700}
-.eq{display:inline-flex;align-items:flex-end;gap:2.5px;height:14px;margin:0 6px;vertical-align:-2px}
-.eq i{width:3.5px;background:var(--rec);border-radius:2px;animation:eq 0.9s ease-in-out infinite}
-.eq i:nth-child(1){height:40%;animation-delay:0s}
-.eq i:nth-child(2){height:75%;animation-delay:.15s}
-.eq i:nth-child(3){height:100%;animation-delay:.3s}
-.eq i:nth-child(4){height:60%;animation-delay:.45s}
-.eq i:nth-child(5){height:30%;animation-delay:.6s}
-@keyframes eq{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1.1)}}
-.cursor{display:inline-block;width:9px;height:1.15em;background:var(--ambar);vertical-align:-3px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
+      /* ---------- el fantasma ---------- */
+      .ghost-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .ghost {
+        width: min(78%, 280px);
+        animation: flotar 3s ease-in-out infinite;
+        transform-origin: top center;
+        filter: drop-shadow(0 24px 48px rgba(255, 179, 0, 0.18));
+      }
+      @media (max-width: 880px) {
+        .ghost {
+          width: min(52%, 220px);
+        }
+      }
+      @keyframes flotar {
+        0%,
+        100% {
+          transform: translateY(0) scaleY(1);
+        }
+        50% {
+          transform: translateY(-10px) scaleY(1.06);
+        }
+      }
+      .ghost-fill {
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(120px 160px at 30% 22%, #ffdf8a 0%, transparent 58%),
+          radial-gradient(170px 210px at 78% 55%, #ffb300 0%, transparent 62%),
+          radial-gradient(150px 190px at 38% 88%, #e5482f 0%, transparent 60%),
+          radial-gradient(210px 250px at 62% 18%, #8a5800 0%, transparent 70%),
+          #2a1c07;
+        filter: blur(14px) saturate(1.15);
+        transform: scale(1.4);
+        animation: lava 8s ease-in-out infinite alternate;
+      }
+      @keyframes lava {
+        0% {
+          transform: scale(1.4) translate(-4%, -3%) rotate(-2deg);
+        }
+        50% {
+          transform: scale(1.5) translate(3%, 4%) rotate(2deg);
+        }
+        100% {
+          transform: scale(1.4) translate(-2%, 3%) rotate(-1deg);
+        }
+      }
+      .ghost-eye {
+        animation: parpadeo 3.4s infinite ease-in-out;
+      }
+      @keyframes parpadeo {
+        0%,
+        92%,
+        100% {
+          ry: 26;
+        }
+        96% {
+          ry: 4;
+        }
+      }
+      .ghost-caption {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--arena);
+        text-align: center;
+        max-width: 300px;
+      }
+      .ghost-caption b {
+        color: var(--ambar);
+        font-weight: 400;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ghost,
+        .ghost-fill,
+        .ghost-eye,
+        .eq i,
+        .cursor,
+        .marquee .track {
+          animation: none !important;
+        }
+      }
 
-/* ---------- marquee consigna ---------- */
-.marquee{background:var(--ambar);color:var(--carbon);transform:rotate(-1.2deg) scale(1.02);margin:110px 0;padding:14px 0;overflow:hidden;white-space:nowrap}
-.marquee .track{display:inline-block;animation:slide 28s linear infinite;font-family:var(--display);font-size:1.5rem;letter-spacing:.02em}
-.marquee span{margin:0 18px}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      /* ---------- terminal demo ---------- */
+      .term {
+        margin: 56px auto 0;
+        background: var(--surface);
+        border: 1px solid var(--borde);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      }
+      .term-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--borde);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--arena);
+      }
+      .term-bar i {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--borde);
+        display: inline-block;
+      }
+      .term-bar i:first-child {
+        background: var(--rec);
+      }
+      .term-bar span {
+        margin-left: 8px;
+      }
+      .term-body {
+        padding: 26px 26px 32px;
+        font-family: var(--mono);
+        font-size: clamp(0.82rem, 1.5vw, 0.98rem);
+        line-height: 1.9;
+      }
+      .t-dim {
+        color: var(--arena);
+        opacity: 0.75;
+      }
+      .t-amb {
+        color: var(--ambar);
+      }
+      .t-ok {
+        color: #7fb069;
+      }
+      .t-rec {
+        color: var(--rec);
+        font-weight: 700;
+      }
+      .eq {
+        display: inline-flex;
+        align-items: flex-end;
+        gap: 2.5px;
+        height: 14px;
+        margin: 0 6px;
+        vertical-align: -2px;
+      }
+      .eq i {
+        width: 3.5px;
+        background: var(--rec);
+        border-radius: 2px;
+        animation: eq 0.9s ease-in-out infinite;
+      }
+      .eq i:nth-child(1) {
+        height: 40%;
+        animation-delay: 0s;
+      }
+      .eq i:nth-child(2) {
+        height: 75%;
+        animation-delay: 0.15s;
+      }
+      .eq i:nth-child(3) {
+        height: 100%;
+        animation-delay: 0.3s;
+      }
+      .eq i:nth-child(4) {
+        height: 60%;
+        animation-delay: 0.45s;
+      }
+      .eq i:nth-child(5) {
+        height: 30%;
+        animation-delay: 0.6s;
+      }
+      @keyframes eq {
+        0%,
+        100% {
+          transform: scaleY(0.5);
+        }
+        50% {
+          transform: scaleY(1.1);
+        }
+      }
+      .cursor {
+        display: inline-block;
+        width: 9px;
+        height: 1.15em;
+        background: var(--ambar);
+        vertical-align: -3px;
+        animation: blink 1s steps(1) infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
 
-/* ---------- secciones ---------- */
-section{padding:56px 0}
-.kicker{font-family:var(--mono);color:var(--ambar);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.kicker::before{content:"";display:inline-block;width:26px;height:2px;background:var(--ambar)}
-h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1;letter-spacing:-.01em;margin-bottom:22px}
-.lead{color:var(--arena);max-width:620px;font-size:1.1rem}
-.lead strong{color:var(--hueso)}
+      /* ---------- marquee consigna ---------- */
+      .marquee {
+        background: var(--ambar);
+        color: var(--carbon);
+        transform: rotate(-1.2deg) scale(1.02);
+        margin: 96px 0;
+        padding: 14px 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .marquee .track {
+        display: inline-block;
+        animation: slide 28s linear infinite;
+        font-family: var(--display);
+        font-size: 1.5rem;
+        letter-spacing: 0.02em;
+      }
+      .marquee span {
+        margin: 0 18px;
+      }
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
 
-/* cards por qué */
-.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:48px}
-.card{background:var(--surface);border:1px solid var(--borde);border-radius:16px;padding:28px 26px;position:relative;overflow:hidden}
-.card h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.35rem;margin:14px 0 10px}
-.card p{color:var(--arena);font-size:.97rem}
-.card p strong{color:var(--hueso)}
-.card .n{font-family:var(--mono);color:var(--ambar);font-size:.8rem}
+      /* ---------- secciones ---------- */
+      section {
+        padding: 56px 0;
+      }
+      .kicker {
+        font-family: var(--mono);
+        color: var(--ambar);
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+      .kicker::before {
+        content: "";
+        display: inline-block;
+        width: 26px;
+        height: 2px;
+        background: var(--ambar);
+      }
+      h2 {
+        font-family: var(--display);
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: clamp(2rem, 4.6vw, 3.4rem);
+        line-height: 1;
+        letter-spacing: -0.01em;
+        margin-bottom: 22px;
+      }
+      .lead {
+        color: var(--arena);
+        max-width: 620px;
+        font-size: 1.1rem;
+      }
+      .lead strong {
+        color: var(--hueso);
+      }
 
-/* pasos */
-.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:48px;counter-reset:paso}
-.paso{border-top:3px solid var(--ambar);padding-top:20px}
-.paso::before{counter-increment:paso;content:"0" counter(paso);font-family:var(--display);font-size:2.6rem;color:var(--ambar);display:block;line-height:1}
-.paso h3{font-size:1.15rem;font-weight:800;margin:12px 0 8px}
-.paso p{color:var(--arena);font-size:.95rem}
+      /* cards por qué */
+      .grid4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin-top: 48px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--borde);
+        border-radius: 16px;
+        padding: 28px 26px;
+        position: relative;
+        overflow: hidden;
+      }
+      .card h3 {
+        font-family: var(--display);
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.35rem;
+        margin: 14px 0 10px;
+      }
+      .card p {
+        color: var(--arena);
+        font-size: 0.97rem;
+      }
+      .card p strong {
+        color: var(--hueso);
+      }
+      .card .n {
+        font-family: var(--mono);
+        color: var(--ambar);
+        font-size: 0.8rem;
+      }
 
-/* comparativa */
-.tabla-wrap{overflow-x:auto;margin-top:48px;border:1px solid var(--borde);border-radius:16px}
-table{width:100%;border-collapse:collapse;min-width:640px;font-size:.95rem}
-th,td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--borde)}
-thead th{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--arena);background:var(--surface)}
-tbody tr:last-child td{border-bottom:none}
-td{color:var(--arena)}
-td:first-child{color:var(--hueso);font-weight:700}
-tr.dilo{background:color-mix(in srgb,var(--ambar) 9%,transparent)}
-tr.dilo td{color:var(--hueso)}
-tr.dilo td:first-child{color:var(--ambar);font-family:var(--display);font-weight:400;letter-spacing:.02em}
-.check{color:var(--ambar);font-weight:800}
-.x{color:var(--rec)}
-.nota{font-family:var(--mono);font-size:.75rem;color:var(--arena);opacity:.7;margin-top:12px}
+      /* pasos */
+      .pasos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 18px;
+        margin-top: 48px;
+        counter-reset: paso;
+      }
+      .paso {
+        border-top: 3px solid var(--ambar);
+        padding-top: 20px;
+      }
+      .paso::before {
+        counter-increment: paso;
+        content: "0" counter(paso);
+        font-family: var(--display);
+        font-size: 2.6rem;
+        color: var(--ambar);
+        display: block;
+        line-height: 1;
+      }
+      .paso h3 {
+        font-size: 1.15rem;
+        font-weight: 800;
+        margin: 12px 0 8px;
+      }
+      .paso p {
+        color: var(--arena);
+        font-size: 0.95rem;
+      }
 
-/* specs strip */
-.specs{margin-top:64px;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);padding:22px 0;font-family:var(--mono);font-size:.82rem;color:var(--arena);display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center}
-.specs b{color:var(--ambar);font-weight:400}
+      /* comparativa */
+      .tabla-wrap {
+        overflow-x: auto;
+        margin-top: 48px;
+        border: 1px solid var(--borde);
+        border-radius: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 640px;
+        font-size: 0.95rem;
+      }
+      th,
+      td {
+        padding: 16px 20px;
+        text-align: left;
+        border-bottom: 1px solid var(--borde);
+      }
+      thead th {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--arena);
+        background: var(--surface);
+      }
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+      td {
+        color: var(--arena);
+      }
+      td:first-child {
+        color: var(--hueso);
+        font-weight: 700;
+      }
+      tr.dilo {
+        background: color-mix(in srgb, var(--ambar) 9%, transparent);
+      }
+      tr.dilo td {
+        color: var(--hueso);
+      }
+      tr.dilo td:first-child {
+        color: var(--ambar);
+        font-family: var(--display);
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+      .check {
+        color: var(--ambar);
+        font-weight: 800;
+      }
+      .x {
+        color: var(--rec);
+      }
+      .nota {
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--arena);
+        opacity: 0.7;
+        margin-top: 12px;
+      }
 
-/* descarga */
-#descarga .grid4{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.dl h3{display:flex;align-items:center;gap:10px}
-.dl .fmt{font-family:var(--mono);font-size:.78rem;color:var(--arena);display:block;margin:6px 0 18px}
-.dl a.btn{width:100%;justify-content:center}
+      /* próximamente */
+      .proximo {
+        margin-top: 48px;
+        border: 2px dashed color-mix(in srgb, var(--ambar) 45%, transparent);
+        border-radius: 16px;
+        padding: 22px 26px;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .proximo .tag {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        background: var(--ambar);
+        color: var(--carbon);
+        border-radius: 999px;
+        padding: 5px 12px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .proximo p {
+        color: var(--arena);
+        font-size: 0.97rem;
+        flex: 1;
+        min-width: 260px;
+      }
+      .proximo p strong {
+        color: var(--hueso);
+      }
 
-/* footer */
-footer{margin-top:96px;border-top:1px solid var(--borde);padding:72px 0 48px;position:relative}
-footer .marca-final{font-family:var(--display);text-transform:uppercase;font-size:clamp(3rem,12vw,9rem);line-height:.9;letter-spacing:-.01em;color:var(--surface2);user-select:none;text-align:center;margin-bottom:56px}
-footer .marca-final b{color:var(--ambar);font-weight:400}
-.foot-grid{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:start}
-.foot-grid p{color:var(--arena);font-size:.92rem;max-width:560px}
-.foot-links{display:flex;flex-direction:column;gap:8px;font-weight:600;text-align:right}
-.foot-fin{margin-top:48px;padding-top:24px;border-top:1px solid var(--borde);font-family:var(--mono);font-size:.75rem;color:var(--arena);opacity:.8;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-@media(max-width:640px){.foot-grid{grid-template-columns:1fr}.foot-links{text-align:left}}
-</style>
-</head>
-<body>
+      /* specs strip */
+      .specs {
+        margin-top: 64px;
+        border-top: 1px solid var(--borde);
+        border-bottom: 1px solid var(--borde);
+        padding: 22px 0;
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        color: var(--arena);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 28px;
+        justify-content: center;
+      }
+      .specs b {
+        color: var(--ambar);
+        font-weight: 400;
+      }
 
-<nav>
-  <div class="wrap">
-    <a class="logo" href="#">
-      <svg width="22" height="22" viewBox="0 0 512 512" aria-hidden="true"><g fill="#FFB300"><circle cx="256" cy="150" r="74"/><rect x="216" y="268" width="80" height="164" rx="40"/></g></svg>
-      <b>DILO</b>
-    </a>
-    <div class="navlinks">
-      <a href="#porque">Por qué</a>
-      <a href="#como">Cómo funciona</a>
-      <a class="gh" href="https://github.com/OldFashioned1994/dilo">GitHub</a>
-      <a class="btn btn-ambar" href="#descarga">Descargar</a>
-    </div>
-  </div>
-</nav>
+      /* FAQ */
+      .faq {
+        display: grid;
+        gap: 12px;
+        margin-top: 48px;
+        max-width: 760px;
+      }
+      details {
+        border: 1px solid var(--borde);
+        border-radius: 12px;
+        background: var(--surface);
+      }
+      summary {
+        cursor: pointer;
+        padding: 18px 22px;
+        font-weight: 800;
+        display: flex;
+        gap: 14px;
+        align-items: baseline;
+        list-style: none;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::before {
+        content: "¡";
+        color: var(--ambar);
+        font-family: var(--display);
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      details[open] summary::before {
+        content: "!";
+      }
+      .faq-body {
+        padding: 0 22px 20px 50px;
+        color: var(--arena);
+        font-size: 0.95rem;
+      }
+      .faq-body strong {
+        color: var(--hueso);
+      }
 
-<header class="hero">
-  <div class="wrap">
-    <h1>No lo tipees.<br><span class="dilo">Dilo.</span></h1>
-    <p class="sub"><strong>DILO</strong> convierte tu voz en texto en cualquier app — Cursor, Claude Code, la terminal, donde estés escribiendo. Libre, gratis y <strong>100% offline</strong>: tu voz no sale de tu compu.</p>
-    <div class="cta-row">
-      <a class="btn btn-ambar" id="cta-dl" href="https://github.com/OldFashioned1994/dilo/releases/latest">↓ Descargar gratis</a>
-      <a class="btn btn-borde" href="https://github.com/OldFashioned1994/dilo">Ver el código</a>
-    </div>
-    <p class="cta-note">Windows · macOS · Linux — código abierto (MIT), fork de <a href="https://github.com/cjpais/handy">Handy</a></p>
+      /* CTA final */
+      .cta-final {
+        text-align: center;
+        padding: 96px 0 72px;
+      }
+      .cta-final h2 {
+        font-size: clamp(2.6rem, 7vw, 5.4rem);
+      }
+      .cta-final h2 span {
+        color: var(--ambar);
+      }
+      .cta-final .nota {
+        margin-top: 18px;
+      }
 
-    <div class="term" aria-hidden="true">
-      <div class="term-bar"><i></i><i></i><i></i><span>~/mi-proyecto — DILO</span></div>
-      <div class="term-body">
-        <div class="t-dim"># 02:47 AM — el prompt número 47 del día</div>
-        <div><span class="t-amb">$</span> <kbd>F9</kbd> <span class="t-rec">● grabando</span><span class="eq"><i></i><i></i><i></i><i></i><i></i></span></div>
-        <div><span class="t-amb">&gt;</span> "<span id="type"></span><span class="cursor"></span>"</div>
-        <div id="done" style="visibility:hidden"><span class="t-ok">✓</span> <span class="t-dim">transcripto en 0.8s — local, sin internet, sin suscripción</span></div>
+      /* descarga */
+      #descarga .grid4 {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .dl h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .dl .fmt {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--arena);
+        display: block;
+        margin: 6px 0 18px;
+      }
+      .dl a.btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* footer */
+      footer {
+        margin-top: 96px;
+        border-top: 1px solid var(--borde);
+        padding: 72px 0 48px;
+        position: relative;
+      }
+      footer .marca-final {
+        font-family: var(--display);
+        text-transform: uppercase;
+        font-size: clamp(3rem, 12vw, 9rem);
+        line-height: 0.9;
+        letter-spacing: -0.01em;
+        color: var(--surface2);
+        user-select: none;
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      footer .marca-final b {
+        color: var(--ambar);
+        font-weight: 400;
+      }
+      .foot-grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+        align-items: start;
+      }
+      .foot-grid p {
+        color: var(--arena);
+        font-size: 0.92rem;
+        max-width: 560px;
+      }
+      .foot-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: 600;
+        text-align: right;
+      }
+      .foot-fin {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid var(--borde);
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--arena);
+        opacity: 0.8;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        justify-content: space-between;
+      }
+      @media (max-width: 640px) {
+        .foot-grid {
+          grid-template-columns: 1fr;
+        }
+        .foot-links {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap">
+        <a class="logo" href="#">
+          <svg width="22" height="22" viewBox="0 0 512 512" aria-hidden="true">
+            <g fill="#FFB300">
+              <circle cx="256" cy="150" r="74" />
+              <rect x="216" y="268" width="80" height="164" rx="40" />
+            </g>
+          </svg>
+          <b>DILO</b>
+        </a>
+        <div class="navlinks">
+          <a href="#porque">Por qué</a>
+          <a href="#como">Cómo funciona</a>
+          <a href="#faq">FAQ</a>
+          <a class="gh" href="https://github.com/OldFashioned1994/dilo">GitHub</a>
+          <a class="btn btn-ambar" href="#descarga">Descargar</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <canvas id="lluvia" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <h1>No lo<br />tipees.<br /><span class="dilo">Dilo.</span></h1>
+            <p class="sub">
+              <strong>DILO</strong> convierte tu voz en texto en cualquier app — Cursor, Claude
+              Code, la terminal. Libre, gratis y <strong>100% offline</strong>: tu voz no sale de
+              tu compu.
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-ambar"
+                id="cta-dl"
+                href="https://github.com/OldFashioned1994/dilo/releases/latest"
+                >↓ Descargar gratis</a
+              >
+              <a class="btn btn-borde" href="https://github.com/OldFashioned1994/dilo"
+                >Ver el código</a
+              >
+            </div>
+            <p class="cta-note">
+              Windows · macOS · Linux — código abierto (MIT), fork de
+              <a href="https://github.com/cjpais/handy">Handy</a>
+            </p>
+          </div>
+
+          <!-- El fantasma: tu audio desaparece después de transcribir -->
+          <div class="ghost-col">
+            <svg
+              class="ghost"
+              viewBox="0 0 231 289"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="El fantasma de DILO"
+            >
+              <defs>
+                <clipPath id="fantasma">
+                  <path
+                    d="M230.809 115.385V249.411C230.809 269.923 214.985 287.282 194.495 288.411C184.544 288.949 175.364 285.718 168.26 280C159.746 273.154 147.769 273.461 139.178 280.23C132.638 285.384 124.381 288.462 115.379 288.462C106.377 288.462 98.1451 285.384 91.6055 280.23C82.912 273.385 70.9353 273.385 62.2415 280.23C55.7532 285.334 47.598 288.411 38.7246 288.462C17.4132 288.615 0 270.667 0 249.359V115.385C0 51.6667 51.6756 0 115.404 0C179.134 0 230.809 51.6667 230.809 115.385Z"
+                  />
+                </clipPath>
+              </defs>
+              <foreignObject width="231" height="289" clip-path="url(#fantasma)">
+                <div
+                  xmlns="http://www.w3.org/1999/xhtml"
+                  style="width: 100%; height: 100%; overflow: hidden"
+                >
+                  <div class="ghost-fill"></div>
+                </div>
+              </foreignObject>
+              <ellipse class="ghost-eye" id="ojo-i" cx="80" cy="120" rx="17" ry="26" fill="#171310" />
+              <ellipse class="ghost-eye" id="ojo-d" cx="150" cy="120" rx="17" ry="26" fill="#171310" />
+            </svg>
+            <p class="ghost-caption">
+              tu audio se transcribe y desaparece — <b>no queda ni el fantasma</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track" id="mq">
+        <span>TU VOZ ES TUYA</span><span>¡</span><span>NO LO TIPEES</span><span>¡</span
+        ><span>DILO</span><span>¡</span><span>GRATIS Y LIBRE</span><span>¡</span
+        ><span>HECHO PARA LATINOAMÉRICA</span><span>¡</span>
       </div>
     </div>
-  </div>
-</header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="track" id="mq"><span>TU VOZ ES TUYA</span><span>¡</span><span>NO LO TIPEES</span><span>¡</span><span>DILO</span><span>¡</span><span>GRATIS Y LIBRE</span><span>¡</span><span>HECHO PARA LATINOAMÉRICA</span><span>¡</span></div>
-</div>
-
-<section id="porque">
-  <div class="wrap">
-    <p class="kicker">por qué existe</p>
-    <h2>Programar con IA es escribir párrafos. Todo el día.</h2>
-    <p class="lead">Prompts largos, contexto, instrucciones. Hablar es <strong>3–4 veces más rápido</strong> que tipear — pero las herramientas buenas de dictado son pagas en dólares, piensan en inglés y mandan tu voz a un servidor ajeno. DILO es la respuesta de este lado del mapa.</p>
-    <div class="grid4">
-      <div class="card"><span class="n">01</span><h3>Gratis</h3><p>No "gratis por 14 días". <strong>Gratis.</strong> Las otras cobran hasta USD 12 por mes por escuchar tu voz en un servidor ajeno.</p></div>
-      <div class="card"><span class="n">02</span><h3>100% offline</h3><p>Whisper y Parakeet corren <strong>en tu máquina</strong>. Cortá el wifi si querés: sigue andando. Nadie más escucha.</p></div>
-      <div class="card"><span class="n">03</span><h3>En tu español</h3><p>El de verdad: <strong>con tu acento</strong>, tus modismos y tus variables en spanglish. Y otros 90+ idiomas, por si acaso.</p></div>
-      <div class="card"><span class="n">04</span><h3>Código abierto</h3><p>Licencia MIT. <strong>Es tuyo:</strong> revisalo, mejoralo, forkealo. Así llegó hasta acá, así sigue.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="como">
-  <div class="wrap">
-    <p class="kicker">cómo funciona</p>
-    <h2>Una tecla. Tu voz. Listo.</h2>
-    <div class="pasos">
-      <div class="paso"><h3>Apretá tu atajo</h3><p>El que quieras — <kbd>F9</kbd>, <kbd>Ctrl</kbd>+<kbd>Space</kbd> — o modo pulsar-para-hablar.</p></div>
-      <div class="paso"><h3>Decí lo que pensás</h3><p>Como se lo dirías a un compañero. El silencio se filtra solo (VAD Silero).</p></div>
-      <div class="paso"><h3>Aparece escrito</h3><p>La transcripción se pega donde tengas el cursor: editor, chat, terminal.</p></div>
-      <div class="paso"><h3>Seguí en lo tuyo</h3><p>Sin cambiar de ventana, sin subir audio a ningún lado, sin perder el hilo.</p></div>
-    </div>
-    <div class="specs">
-      <span><b>modelos</b> Whisper Small→Large · Parakeet V3 (CPU)</span>
-      <span><b>vad</b> Silero</span>
-      <span><b>stack</b> Rust + Tauri</span>
-      <span><b>gpu</b> opcional</span>
-      <span><b>so</b> Windows · macOS · Linux</span>
-    </div>
-  </div>
-</section>
-
-<section id="comparar">
-  <div class="wrap">
-    <p class="kicker">contra las de siempre</p>
-    <h2>La cuenta es fácil</h2>
-    <div class="tabla-wrap">
-      <table>
-        <thead><tr><th>Herramienta</th><th>Precio</th><th>Tu voz</th><th>Español</th><th>Plataformas</th></tr></thead>
-        <tbody>
-          <tr class="dilo"><td>DILO</td><td><span class="check">Gratis, open source</span></td><td><span class="check">Se queda en tu compu</span></td><td><span class="check">Primero</span></td><td>Windows · macOS · Linux</td></tr>
-          <tr><td>Wispr Flow</td><td>~USD 12/mes</td><td><span class="x">Viaja a la nube</span></td><td>Segundo idioma</td><td>Windows · macOS</td></tr>
-          <tr><td>superwhisper</td><td>~USD 8.49/mes</td><td>Local</td><td>Segundo idioma</td><td>Solo macOS</td></tr>
-          <tr><td>Dictado del sistema</td><td>Incluido</td><td><span class="x">Depende del SO</span></td><td>Regular</td><td>El tuyo</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="nota"># precios y características de referencia a julio 2026 — correginos con un issue si cambió algo</p>
-  </div>
-</section>
-
-<section id="descarga">
-  <div class="wrap">
-    <p class="kicker">descarga</p>
-    <h2>Llevate DILO</h2>
-    <p class="lead">Instaladores compilados desde el código abierto, publicados en GitHub Releases.</p>
-    <div class="grid4">
-      <div class="card dl"><h3>Windows</h3><span class="fmt">.exe · .msi — x64 y ARM64</span><a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest">↓ Descargar</a></div>
-      <div class="card dl"><h3>macOS</h3><span class="fmt">.dmg — Apple Silicon e Intel</span><a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest">↓ Descargar</a></div>
-      <div class="card dl"><h3>Linux</h3><span class="fmt">.deb · .rpm · AppImage — x64 y ARM64</span><a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest">↓ Descargar</a></div>
-    </div>
-    <p class="nota"># primera vez: otorgá permisos de micrófono (y accesibilidad en macOS) · hardware modesto → elegí Parakeet V3, corre en CPU a ~5x tiempo real</p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="marca-final" aria-hidden="true"><b>¡</b>DILO<b>!</b></div>
-    <div class="foot-grid">
-      <p><strong style="color:var(--hueso)">DILO</strong> es un fork de <a href="https://github.com/cjpais/handy">Handy</a>, creado por CJ Pais y su comunidad (MIT). Sin afiliación, con gratitud: si DILO te sirve, <a href="https://handy.computer/donate">apoyá al proyecto original</a>. Gracias a Whisper (OpenAI), Parakeet (NVIDIA), ggml, Silero y Tauri.</p>
-      <div class="foot-links">
-        <a href="https://github.com/OldFashioned1994/dilo">GitHub</a>
-        <a href="https://github.com/OldFashioned1994/dilo/issues">Reportar un problema</a>
-        <a href="https://github.com/OldFashioned1994/dilo/blob/main/marca/estrategia.md">La marca</a>
+    <section id="porque">
+      <div class="wrap">
+        <p class="kicker">por qué existe</p>
+        <h2>Programar con IA es escribir párrafos. Todo el día.</h2>
+        <p class="lead">
+          Prompts largos, contexto, instrucciones. Hablar es <strong>3–4 veces más rápido</strong>
+          que tipear — pero las herramientas buenas de dictado son pagas en dólares, piensan en
+          inglés y mandan tu voz a un servidor ajeno. DILO es la respuesta de este lado del mapa.
+        </p>
+        <div class="grid4">
+          <div class="card">
+            <span class="n">01</span>
+            <h3>Gratis</h3>
+            <p>
+              No "gratis por 14 días". <strong>Gratis.</strong> Las otras cobran hasta USD 12 por
+              mes por escuchar tu voz en un servidor ajeno.
+            </p>
+          </div>
+          <div class="card">
+            <span class="n">02</span>
+            <h3>100% offline</h3>
+            <p>
+              Whisper y Parakeet corren <strong>en tu máquina</strong>. Cortá el wifi si querés:
+              sigue andando. Nadie más escucha.
+            </p>
+          </div>
+          <div class="card">
+            <span class="n">03</span>
+            <h3>En tu español</h3>
+            <p>
+              El de verdad: <strong>con tu acento</strong>, tus modismos y tus variables en
+              spanglish. Y otros 90+ idiomas, por si acaso.
+            </p>
+          </div>
+          <div class="card">
+            <span class="n">04</span>
+            <h3>Código abierto</h3>
+            <p>
+              Licencia MIT. <strong>Es tuyo:</strong> revisalo, mejoralo, forkealo. Así llegó
+              hasta acá, así sigue.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="foot-fin">
-      <span>hecho en latinoamérica para el mundo</span>
-      <span>esta página no tiene trackers, ni cookies, ni analytics — como debe ser</span>
-      <span>© 2026 dilo · licencia mit</span>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<script>
-// Detección de SO para el CTA (solo cambia la etiqueta; el link es el mismo)
-(function(){
-  const b=document.getElementById('cta-dl');
-  const u=navigator.userAgent;
-  let so='';
-  if(/Windows/i.test(u))so='para Windows';
-  else if(/Mac/i.test(u))so='para macOS';
-  else if(/Linux/i.test(u))so='para Linux';
-  if(so)b.textContent='↓ Descargar gratis '+so;
-})();
+    <section id="como">
+      <div class="wrap">
+        <p class="kicker">cómo funciona</p>
+        <h2>Una tecla. Tu voz. Listo.</h2>
+        <div class="pasos">
+          <div class="paso">
+            <h3>Apretá tu atajo</h3>
+            <p>
+              El que quieras — <kbd>F9</kbd>, <kbd>Ctrl</kbd>+<kbd>Space</kbd> — o modo
+              pulsar-para-hablar.
+            </p>
+          </div>
+          <div class="paso">
+            <h3>Decí lo que pensás</h3>
+            <p>Como se lo dirías a un compañero. El silencio se filtra solo (VAD Silero).</p>
+          </div>
+          <div class="paso">
+            <h3>Aparece escrito</h3>
+            <p>La transcripción se pega donde tengas el cursor: editor, chat, terminal.</p>
+          </div>
+          <div class="paso">
+            <h3>Seguí en lo tuyo</h3>
+            <p>Sin cambiar de ventana, sin subir audio a ningún lado, sin perder el hilo.</p>
+          </div>
+        </div>
 
-// Máquina de escribir del hero
-(function(){
-  const frase='Refactorizame el servicio de pagos con el patrón repository y agregale tests, dale';
-  const el=document.getElementById('type'), done=document.getElementById('done');
-  let i=0;
-  function tic(){
-    if(i<=frase.length){
-      el.textContent=frase.slice(0,i); i++;
-      setTimeout(tic,i<12?60:22+Math.random()*40);
-    }else{
-      done.style.visibility='visible';
-      setTimeout(()=>{i=0;done.style.visibility='hidden';tic()},6000);
-    }
-  }
-  setTimeout(tic,600);
-})();
+        <div class="term" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>~/mi-proyecto — DILO</span></div>
+          <div class="term-body">
+            <div class="t-dim"># 02:47 AM — el prompt número 47 del día</div>
+            <div>
+              <span class="t-amb">$</span> <kbd>F9</kbd> <span class="t-rec">● grabando</span
+              ><span class="eq"><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div>
+              <span class="t-amb">&gt;</span> "<span id="type"></span><span class="cursor"></span>"
+            </div>
+            <div id="done" style="visibility: hidden">
+              <span class="t-ok">✓</span>
+              <span class="t-dim">transcripto en 0.8s — local, sin internet, sin suscripción</span>
+            </div>
+          </div>
+        </div>
 
-// Duplicar la cinta para el loop infinito
-(function(){const m=document.getElementById('mq');m.innerHTML+=m.innerHTML;})();
-</script>
-</body>
+        <div class="specs">
+          <span><b>modelos</b> Whisper Small→Large · Parakeet V3 (CPU)</span>
+          <span><b>vad</b> Silero</span>
+          <span><b>stack</b> Rust + Tauri</span>
+          <span><b>gpu</b> opcional</span>
+          <span><b>so</b> Windows · macOS · Linux</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparar">
+      <div class="wrap">
+        <p class="kicker">contra las de siempre</p>
+        <h2>La cuenta es fácil</h2>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Herramienta</th>
+                <th>Precio</th>
+                <th>Tu voz</th>
+                <th>Español</th>
+                <th>Plataformas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dilo">
+                <td>DILO</td>
+                <td><span class="check">Gratis, open source</span></td>
+                <td><span class="check">Se queda en tu compu</span></td>
+                <td><span class="check">Primero</span></td>
+                <td>Windows · macOS · Linux</td>
+              </tr>
+              <tr>
+                <td>Wispr Flow</td>
+                <td>~USD 12/mes</td>
+                <td><span class="x">Viaja a la nube</span></td>
+                <td>Segundo idioma</td>
+                <td>Windows · macOS</td>
+              </tr>
+              <tr>
+                <td>superwhisper</td>
+                <td>~USD 8.49/mes</td>
+                <td>Local</td>
+                <td>Segundo idioma</td>
+                <td>Solo macOS</td>
+              </tr>
+              <tr>
+                <td>Dictado del sistema</td>
+                <td>Incluido</td>
+                <td><span class="x">Depende del SO</span></td>
+                <td>Regular</td>
+                <td>El tuyo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="nota">
+          # precios y características de referencia a julio 2026 — correginos con un issue si
+          cambió algo
+        </p>
+
+        <div class="proximo">
+          <span class="tag">PRÓXIMAMENTE · v1.1</span>
+          <p>
+            <strong>Modo Reunión:</strong> grabá la reunión, DILO la transcribe en tu compu y te
+            arma la minuta con temas, decisiones y acciones.
+            <a href="https://github.com/OldFashioned1994/dilo">Ya está en el código →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <p class="kicker">preguntas frecuentes</p>
+        <h2>Lo que preguntan todos</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Es gratis de verdad?</summary>
+            <div class="faq-body">
+              Sí. <strong>Sin cuenta, sin trial, sin plan "pro".</strong> Es software libre (MIT):
+              el código completo está en GitHub y podés compilarlo vos si querés.
+            </div>
+          </details>
+          <details>
+            <summary>¿Mi voz va a algún servidor?</summary>
+            <div class="faq-body">
+              No. Los modelos de reconocimiento (Whisper, Parakeet) corren
+              <strong>en tu máquina</strong>. Podés cortar internet y DILO sigue transcribiendo. El
+              audio se descarta después de transcribir.
+            </div>
+          </details>
+          <details>
+            <summary>Windows/macOS dice "aplicación no verificada"</summary>
+            <div class="faq-body">
+              Es lo normal en open source sin certificado corporativo (cuestan cientos de dólares
+              por año). En Windows: <strong>Más información → Ejecutar de todas formas</strong>. En
+              macOS: <strong>clic derecho → Abrir</strong>. El código es público y auditable —
+              justamente lo contrario de una app opaca.
+            </div>
+          </details>
+          <details>
+            <summary>¿Entiende mi acento?</summary>
+            <div class="faq-body">
+              Whisper está entrenado con muchísimo español real de todas las regiones. Y si usás
+              términos raros (nombres, jerga de tu equipo), DILO tiene
+              <strong>diccionario personalizado</strong> para que los escriba bien.
+            </div>
+          </details>
+          <details>
+            <summary>¿Qué necesito para que ande bien?</summary>
+            <div class="faq-body">
+              Cualquier compu razonable. Con GPU, los modelos Whisper vuelan; en CPU modesta elegí
+              <strong>Parakeet V3</strong> (corre a ~5x tiempo real desde un Intel de 6ª
+              generación).
+            </div>
+          </details>
+          <details>
+            <summary>¿En qué se diferencia del dictado de Windows o Google?</summary>
+            <div class="faq-body">
+              Ese dictado manda tu voz a la nube, anda solo donde el sistema quiere y en español
+              rinde regular. DILO es <strong>local, funciona en cualquier app</strong> (editor,
+              terminal, navegador) y elegís el modelo que mejor le queda a tu máquina.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="wrap">
+        <h2>No lo pienses.<br /><span>Dilo.</span></h2>
+        <div class="cta-row" style="justify-content: center; margin-top: 32px">
+          <a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest"
+            >↓ Descargar gratis</a
+          >
+        </div>
+        <p class="nota">3 minutos: bajar, instalar, hablar.</p>
+      </div>
+    </section>
+
+    <section id="descarga" style="padding-top: 0">
+      <div class="wrap">
+        <p class="kicker">descarga</p>
+        <h2>Llevate DILO</h2>
+        <p class="lead">
+          Instaladores compilados desde el código abierto, publicados en GitHub Releases.
+        </p>
+        <div class="grid4">
+          <div class="card dl">
+            <h3>Windows</h3>
+            <span class="fmt">.exe · .msi — x64 y ARM64</span>
+            <a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest"
+              >↓ Descargar</a
+            >
+          </div>
+          <div class="card dl">
+            <h3>macOS</h3>
+            <span class="fmt">.dmg — Apple Silicon e Intel</span>
+            <a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest"
+              >↓ Descargar</a
+            >
+          </div>
+          <div class="card dl">
+            <h3>Linux</h3>
+            <span class="fmt">.deb · .rpm · AppImage — x64 y ARM64</span>
+            <a class="btn btn-ambar" href="https://github.com/OldFashioned1994/dilo/releases/latest"
+              >↓ Descargar</a
+            >
+          </div>
+        </div>
+        <p class="nota">
+          # primera vez: otorgá permisos de micrófono (y accesibilidad en macOS) · hardware modesto
+          → elegí Parakeet V3, corre en CPU a ~5x tiempo real
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="marca-final" aria-hidden="true"><b>¡</b>DILO<b>!</b></div>
+        <div class="foot-grid">
+          <p>
+            <strong style="color: var(--hueso)">DILO</strong> es un fork de
+            <a href="https://github.com/cjpais/handy">Handy</a>, creado por CJ Pais y su comunidad
+            (MIT). Sin afiliación, con gratitud: si DILO te sirve,
+            <a href="https://handy.computer/donate">apoyá al proyecto original</a>. Gracias a
+            Whisper (OpenAI), Parakeet (NVIDIA), ggml, Silero y Tauri.
+          </p>
+          <div class="foot-links">
+            <a href="https://github.com/OldFashioned1994/dilo">GitHub</a>
+            <a href="https://github.com/OldFashioned1994/dilo/issues">Reportar un problema</a>
+            <a href="marca.html">La marca</a>
+          </div>
+        </div>
+        <div class="foot-fin">
+          <span>hecho en latinoamérica para el mundo</span>
+          <span>esta página no tiene trackers, ni cookies, ni analytics — como debe ser</span>
+          <span>© 2026 dilo · licencia mit</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Detección de SO para el CTA (solo cambia la etiqueta; el link es el mismo)
+      (function () {
+        const b = document.getElementById("cta-dl");
+        const u = navigator.userAgent;
+        let so = "";
+        if (/Windows/i.test(u)) so = "para Windows";
+        else if (/Mac/i.test(u)) so = "para macOS";
+        else if (/Linux/i.test(u)) so = "para Linux";
+        if (so) b.textContent = "↓ Descargar gratis " + so;
+      })();
+
+      // Máquina de escribir de la terminal
+      (function () {
+        const frase =
+          "Refactorizame el servicio de pagos con el patrón repository y agregale tests, dale";
+        const el = document.getElementById("type"),
+          done = document.getElementById("done");
+        let i = 0;
+        function tic() {
+          if (i <= frase.length) {
+            el.textContent = frase.slice(0, i);
+            i++;
+            setTimeout(tic, i < 12 ? 60 : 22 + Math.random() * 40);
+          } else {
+            done.style.visibility = "visible";
+            setTimeout(() => {
+              i = 0;
+              done.style.visibility = "hidden";
+              tic();
+            }, 6000);
+          }
+        }
+        setTimeout(tic, 600);
+      })();
+
+      // Duplicar la cinta para el loop infinito
+      (function () {
+        const m = document.getElementById("mq");
+        m.innerHTML += m.innerHTML;
+      })();
+
+      // Ojos del fantasma: siguen el cursor con un lerp suave
+      (function () {
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const izq = document.getElementById("ojo-i"),
+          der = document.getElementById("ojo-d");
+        if (!izq || !der || reduce) return;
+        let tx = 0,
+          ty = 0,
+          x = 0,
+          y = 0;
+        const MAX = 8;
+        window.addEventListener(
+          "mousemove",
+          (e) => {
+            const svg = izq.ownerSVGElement.getBoundingClientRect();
+            const cx = svg.left + svg.width / 2;
+            const cy = svg.top + svg.height / 2;
+            tx = Math.max(-MAX, Math.min(MAX, (e.clientX - cx) * 0.08));
+            ty = Math.max(-MAX, Math.min(MAX, (e.clientY - cy) * 0.08));
+          },
+          { passive: true },
+        );
+        (function anim() {
+          x += (tx - x) * 0.12;
+          y += (ty - y) * 0.12;
+          izq.setAttribute("cx", 80 + x);
+          izq.setAttribute("cy", 120 + y);
+          der.setAttribute("cx", 150 + x);
+          der.setAttribute("cy", 120 + y);
+          requestAnimationFrame(anim);
+        })();
+      })();
+
+      // Lluvia de «¡» en el hero (canvas, sutil, estilo terminal)
+      (function () {
+        const cv = document.getElementById("lluvia");
+        const hero = cv.parentElement;
+        const ctx = cv.getContext("2d");
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let W = 0,
+          H = 0,
+          parts = [];
+        function resize() {
+          W = cv.width = hero.clientWidth;
+          H = cv.height = hero.clientHeight;
+        }
+        function crear(n) {
+          parts = [];
+          for (let i = 0; i < n; i++) {
+            parts.push({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              s: 13 + Math.random() * 16,
+              v: 0.25 + Math.random() * 0.55,
+              o: 0.05 + Math.random() * 0.1,
+            });
+          }
+        }
+        function pintar() {
+          ctx.clearRect(0, 0, W, H);
+          for (const p of parts) {
+            ctx.font = p.s + "px 'JetBrains Mono', monospace";
+            ctx.fillStyle = "rgba(255,179,0," + p.o + ")";
+            ctx.fillText("¡", p.x, p.y);
+          }
+        }
+        function paso() {
+          for (const p of parts) {
+            p.y += p.v;
+            if (p.y > H + 30) {
+              p.y = -20;
+              p.x = Math.random() * W;
+            }
+          }
+          pintar();
+          requestAnimationFrame(paso);
+        }
+        resize();
+        crear(Math.round(W / 34));
+        window.addEventListener("resize", () => {
+          resize();
+          crear(Math.round(W / 34));
+          if (reduce) pintar();
+        });
+        if (reduce) {
+          pintar();
+        } else {
+          requestAnimationFrame(paso);
+        }
+      })();
+    </script>
+  </body>
 </html>
