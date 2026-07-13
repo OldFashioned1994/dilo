@@ -63,6 +63,19 @@ texto encima en modo claro.
 - **Foto/ilustración:** nada de stock corporativo. Capturas reales de terminal
   y editor, tratadas sobre Carbón con acentos ámbar.
 
+## La mascota: el Fantasma
+
+El fantasma de la privacidad (vive en el hero de la landing): silueta clásica de
+fantasmita rellena con un gradiente ámbar-brasa animado, ojos carbón que siguen
+el cursor y parpadean. **Qué significa:** tu audio se transcribe y desaparece —
+*"no queda ni el fantasma"*. Es la cara amable del argumento más duro de la
+marca (nada viaja a la nube).
+
+Reglas: colores solo de la paleta (ámbar/brasa sobre carbón, nunca el violeta
+espectral genérico); aparece **una sola vez por pieza**; nunca reemplaza al
+isotipo «¡» en logo, íconos ni UI de la app. Es un personaje de comunicación,
+no un símbolo de identidad.
+
 ## Do / Don't
 
 - ✅ Ámbar sobre Carbón; «¡» como bullet; capturas reales; humor seco en micro-copy.
