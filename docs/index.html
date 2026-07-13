@@ -805,6 +805,18 @@
         width: 100%;
         justify-content: center;
       }
+      .dl .alt {
+        display: block;
+        margin-top: 12px;
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--arena);
+      }
+      .dl .alt a {
+        color: var(--arena);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
 
       /* footer */
       footer {
@@ -1243,6 +1255,7 @@
         <div class="cta-row" style="justify-content: center; margin-top: 32px">
           <a
             class="btn btn-ambar"
+            id="cta-dl2"
             href="https://github.com/OldFashioned1994/dilo/releases/latest"
             >↓ Descargar gratis</a
           >
@@ -1262,35 +1275,47 @@
         <div class="grid4">
           <div class="card dl">
             <h3>Windows</h3>
-            <span class="fmt">.exe · .msi — x64 y ARM64</span>
+            <span class="fmt">instalador .exe — doble clic y listo</span>
             <a
               class="btn btn-ambar"
+              id="dl-win"
               href="https://github.com/OldFashioned1994/dilo/releases/latest"
               >↓ Descargar</a
             >
+            <span class="alt" id="alt-win"></span>
           </div>
           <div class="card dl">
             <h3>macOS</h3>
-            <span class="fmt">.dmg — Apple Silicon e Intel</span>
+            <span class="fmt">imagen .dmg — arrastrá a Aplicaciones</span>
             <a
               class="btn btn-ambar"
+              id="dl-mac"
               href="https://github.com/OldFashioned1994/dilo/releases/latest"
               >↓ Descargar</a
             >
+            <span class="alt" id="alt-mac"></span>
           </div>
           <div class="card dl">
             <h3>Linux</h3>
-            <span class="fmt">.deb · .rpm · AppImage — x64 y ARM64</span>
+            <span class="fmt"
+              >AppImage — dale permisos de ejecución y corré</span
+            >
             <a
               class="btn btn-ambar"
+              id="dl-lin"
               href="https://github.com/OldFashioned1994/dilo/releases/latest"
               >↓ Descargar</a
             >
+            <span class="alt" id="alt-lin"></span>
           </div>
         </div>
         <p class="nota">
           # primera vez: otorgá permisos de micrófono (y accesibilidad en macOS)
           · hardware modesto → elegí Parakeet V3, corre en CPU a ~5x tiempo real
+          ·
+          <a href="https://github.com/OldFashioned1994/dilo/releases/latest"
+            >todas las versiones en GitHub</a
+          >
         </p>
       </div>
     </section>
@@ -1329,15 +1354,93 @@
     </footer>
 
     <script>
-      // Detección de SO para el CTA (solo cambia la etiqueta; el link es el mismo)
+      // Descarga directa: detecta el SO y apunta los botones al instalador
+      // correcto vía la API pública de GitHub. Si la API no responde, todos
+      // los links quedan en la página de releases (fallback seguro).
       (function () {
-        const b = document.getElementById("cta-dl");
+        const $ = (id) => document.getElementById(id);
         const u = navigator.userAgent;
-        let so = "";
-        if (/Windows/i.test(u)) so = "para Windows";
-        else if (/Mac/i.test(u)) so = "para macOS";
-        else if (/Linux/i.test(u)) so = "para Linux";
-        if (so) b.textContent = "↓ Descargar gratis " + so;
+        const os = /Windows/i.test(u)
+          ? "win"
+          : /Mac/i.test(u)
+            ? "mac"
+            : /Linux|X11/i.test(u)
+              ? "lin"
+              : "";
+        const nombres = {
+          win: "para Windows",
+          mac: "para macOS",
+          lin: "para Linux",
+        };
+        if (os) $("cta-dl").textContent = "↓ Descargar gratis " + nombres[os];
+
+        const mb = (a) => " (" + Math.round(a.size / 1048576) + " MB)";
+        const link = (a, txt) =>
+          '<a href="' + a.browser_download_url + '">' + txt + "</a>";
+
+        fetch(
+          "https://api.github.com/repos/OldFashioned1994/dilo/releases/latest",
+        )
+          .then((r) => r.json())
+          .then((rel) => {
+            const A = rel.assets || [];
+            const f = (re) => A.find((a) => re.test(a.name));
+            const winX64 = f(/_x64-setup\.exe$/i);
+            const winArm = f(/_arm64-setup\.exe$/i);
+            const macArm = f(/_aarch64\.dmg$/i);
+            const macX64 = f(/_x64\.dmg$/i);
+            const linX64 = f(/_amd64\.AppImage$/i);
+            const linArm = f(/_aarch64\.AppImage$/i);
+            const deb = f(/_amd64\.deb$/i);
+            const rpm = f(/x86_64\.rpm$/i);
+
+            if (winX64) {
+              $("dl-win").href = winX64.browser_download_url;
+              $("dl-win").textContent = "↓ Windows x64" + mb(winX64);
+            }
+            if (winArm)
+              $("alt-win").innerHTML =
+                "también: " + link(winArm, "ARM64 (.exe)");
+            if (macArm) {
+              $("dl-mac").href = macArm.browser_download_url;
+              $("dl-mac").textContent = "↓ Apple Silicon" + mb(macArm);
+            }
+            if (macX64)
+              $("alt-mac").innerHTML =
+                "también: " + link(macX64, "Mac Intel (.dmg)");
+            if (linX64) {
+              $("dl-lin").href = linX64.browser_download_url;
+              $("dl-lin").textContent = "↓ AppImage x64" + mb(linX64);
+            }
+            const altsLin = [
+              deb && link(deb, ".deb"),
+              rpm && link(rpm, ".rpm"),
+              linArm && link(linArm, "ARM64"),
+            ].filter(Boolean);
+            if (altsLin.length)
+              $("alt-lin").innerHTML = "también: " + altsLin.join(" · ");
+
+            // Los CTA del hero y del cierre descargan directo el instalador del SO detectado
+            const principal =
+              os === "win"
+                ? winX64
+                : os === "mac"
+                  ? macArm
+                  : os === "lin"
+                    ? linX64
+                    : null;
+            if (principal) {
+              $("cta-dl").href = principal.browser_download_url;
+              $("cta-dl").textContent =
+                "↓ Descargar gratis " + nombres[os] + mb(principal);
+              const b2 = $("cta-dl2");
+              if (b2) {
+                b2.href = principal.browser_download_url;
+                b2.textContent = "↓ Descargar gratis" + mb(principal);
+              }
+            }
+          })
+          .catch(() => {});
       })();
 
       // Máquina de escribir de la terminal
