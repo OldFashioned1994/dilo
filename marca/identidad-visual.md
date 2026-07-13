@@ -13,7 +13,7 @@ pero cálida como acá. Nada de gradientes violeta ni glassmorphism: tinta y fó
 
 El signo de apertura de exclamación **solo existe en español**. Y dibujado con
 la cápsula redonda arriba y el mango abajo, **es un micrófono**. Ese doble
-sentido es la marca entera en un glifo: *un micrófono que solo nosotros tenemos*.
+sentido es la marca entera en un glifo: _un micrófono que solo nosotros tenemos_.
 
 - Archivo: `marca/isotipo.svg` (mark) y `marca/logo.svg` (lockup con wordmark).
 - Área de protección: media cápsula (½ del diámetro del punto) alrededor.
@@ -27,17 +27,17 @@ Junto al isotipo o solo. La «¡» puede reemplazar espacios en piezas gráficas
 
 ## Color
 
-| Token | Hex | Rol |
-|---|---|---|
-| Carbón | `#171310` | Fondo oscuro / tinta sobre claro. Negro cálido, nunca #000. |
-| Hueso | `#F4EDE3` | Fondo claro / texto sobre oscuro. Blanco cálido, nunca #FFF. |
-| Ámbar | `#FFB300` | Acento sobre oscuro: el fósforo de la terminal. Solo decorativo sobre claro. |
-| Ámbar tostado | `#8A5800` | Acento/links sobre fondo claro (AA: 5.2:1 sobre Hueso). |
-| Rojo REC | `#E5482F` | Solo estado de grabación. Nunca decorativo. |
-| Arena | `#6E6155` | Texto secundario sobre claro (AA: 5.2:1). |
-| Arena claro | `#B9A88F` | Texto secundario sobre oscuro. |
-| Superficies | `#FBF7F0` claro / `#201A15` oscuro | Cards, paneles. |
-| Bordes | `#E5DACA` claro / `#2B241D` oscuro | Líneas, divisores. |
+| Token         | Hex                                | Rol                                                                          |
+| ------------- | ---------------------------------- | ---------------------------------------------------------------------------- |
+| Carbón        | `#171310`                          | Fondo oscuro / tinta sobre claro. Negro cálido, nunca #000.                  |
+| Hueso         | `#F4EDE3`                          | Fondo claro / texto sobre oscuro. Blanco cálido, nunca #FFF.                 |
+| Ámbar         | `#FFB300`                          | Acento sobre oscuro: el fósforo de la terminal. Solo decorativo sobre claro. |
+| Ámbar tostado | `#8A5800`                          | Acento/links sobre fondo claro (AA: 5.2:1 sobre Hueso).                      |
+| Rojo REC      | `#E5482F`                          | Solo estado de grabación. Nunca decorativo.                                  |
+| Arena         | `#6E6155`                          | Texto secundario sobre claro (AA: 5.2:1).                                    |
+| Arena claro   | `#B9A88F`                          | Texto secundario sobre oscuro.                                               |
+| Superficies   | `#FBF7F0` claro / `#201A15` oscuro | Cards, paneles.                                                              |
+| Bordes        | `#E5DACA` claro / `#2B241D` oscuro | Líneas, divisores.                                                           |
 
 Contrastes verificados: Hueso/Carbón 15.9:1 · Ámbar/Carbón 10.3:1 ·
 Ámbar tostado/Hueso 5.2:1 · Arena/Hueso 5.2:1. El ámbar puro **nunca** lleva
@@ -68,7 +68,7 @@ texto encima en modo claro.
 El fantasma de la privacidad (vive en el hero de la landing): silueta clásica de
 fantasmita rellena con un gradiente ámbar-brasa animado, ojos carbón que siguen
 el cursor y parpadean. **Qué significa:** tu audio se transcribe y desaparece —
-*"no queda ni el fantasma"*. Es la cara amable del argumento más duro de la
+_"no queda ni el fantasma"_. Es la cara amable del argumento más duro de la
 marca (nada viaja a la nube).
 
 Reglas: colores solo de la paleta (ámbar/brasa sobre carbón, nunca el violeta
@@ -86,6 +86,6 @@ no un símbolo de identidad.
 
 ## Rastreo a estrategia (test del hilo)
 
-- «¡»-micrófono → *idioma propio + voz* (esencia: tu voz es tuya).
-- Ámbar-terminal → *público dev que vive en la consola* + calidez Everyman.
-- Archivo Black (Buenos Aires, libre) → *hecho en LatAm + software libre* (Forajido con causa).
+- «¡»-micrófono → _idioma propio + voz_ (esencia: tu voz es tuya).
+- Ámbar-terminal → _público dev que vive en la consola_ + calidez Everyman.
+- Archivo Black (Buenos Aires, libre) → _hecho en LatAm + software libre_ (Forajido con causa).
